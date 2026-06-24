@@ -18,7 +18,7 @@ if [ ! -d "$dm_tree_dir/data" ]; then
 fi
 
 for n in $node $memory_nodes; do
-    ssh skv-node$n "mkdir -p $dm_tree_dir/data"
+    ssh w$n "mkdir -p $dm_tree_dir/data"
 done
 
 # The 'ae_data_dir' directory is used to collect the experiment results.
@@ -30,11 +30,11 @@ fi
 # Configure hugepages on compute and memory nodes
 echo "---------- Configuring hugepages on compute and memory nodes ----------"
 for n in $memory_nodes; do
-    ssh skv-node$n "/bin/bash -c 'sudo sysctl -w vm.nr_hugepages=68768'; exit"
+    ssh w$n "/bin/bash -c 'sudo sysctl -w vm.nr_hugepages=68768'; exit"
 done
 
 for n in $node; do
-    ssh skv-node$n "/bin/bash -c 'sudo sysctl -w vm.nr_hugepages=12768'; exit"
+    ssh w$n "/bin/bash -c 'sudo sysctl -w vm.nr_hugepages=12768'; exit"
 done
 sudo sysctl -w vm.nr_hugepages=12768
 
@@ -46,8 +46,8 @@ for dis in $distribution; do
             
             # Run script on memory nodes
             echo "Running server process on memory nodes"
-            ssh skv-node3 "/bin/bash -c 'cd $dm_tree_dir/script && bash restart_memc.sh'; exit;"
-            ssh skv-node3 "/bin/bash -c 'cd $dm_tree_dir/script && bash run_server.sh'; exit;"
+            ssh w/bash -c 'cd $dm_tree_dir/script && bash restart_memc.sh'; exit;"
+            ssh w/bash -c 'cd $dm_tree_dir/script && bash run_server.sh'; exit;"
             echo "============================="
 
             # Execute ycsbc on compute nodes
@@ -55,7 +55,7 @@ for dis in $distribution; do
             for n in $node; do
                 sleep 2
                 echo "Running ycsbc on compute node $n"
-                ssh skv-node$n "cd $dm_tree_dir/build; nohup ./ycsbc $thread 4 $file_name $dis > $dm_tree_dir/data/node$n-exp0_dmtree_$file_name-$dis-thread$thread-coro4.txt 2>&1 &"
+                ssh w$dm_tree_dir/build; nohup ./ycsbc $thread 4 $file_name $dis > $dm_tree_dir/data/node$n-exp0_dmtree_$file_name-$dis-thread$thread-coro4.txt 2>&1 &"
             done
             
             sleep 2
@@ -65,7 +65,7 @@ for dis in $distribution; do
             
             # Run kill_server.sh script on memory nodes
             echo "Kill server process on memory nodes"
-            ssh skv-node3 "/bin/bash -c 'cd $dm_tree_dir/script && bash kill_server.sh'; exit;"
+            ssh w/bash -c 'cd $dm_tree_dir/script && bash kill_server.sh'; exit;"
             echo "============================="
 
             # After completion, copy data from compute nodes to node7
@@ -73,7 +73,7 @@ for dis in $distribution; do
             for n in $node; do
                 echo "Copying data from node$n to node7's AE/Data directory"
                 # Use scp to copy data files from each compute node to node7's AE/Data directory
-                scp "skv-node$n:$dm_tree_dir/data/node$n-exp0_dmtree_$file_name-$dis-thread$thread-coro4.txt" "$ae_data_dir/"
+                scp "wtree_dir/data/node$n-exp0_dmtree_$file_name-$dis-thread$thread-coro4.txt" "$ae_data_dir/"
             done
             echo "Copying local data from node7 to node7's AE/Data directory"
             cp "$dm_tree_dir/data/node7-exp0_dmtree_$file_name-$dis-thread$thread-coro4.txt" "$ae_data_dir/"

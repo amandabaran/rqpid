@@ -18,7 +18,7 @@ We evaluate and compare **DMTree** with five state-of-the-art DM-optimized range
 
 ## Cluster setup
 
-* We provide a server cluster consisting of 7 nodes (skv-node1 to skv-node7) for reproducing the experiments in our paper. One node, `skv-node7`, will be made available as the jump host for accessing the cluster and as the main node for running the reproduction scripts. 
+* We provide a server cluster consisting of 7 nodes (w1 to w7) for reproducing the experiments in our paper. One node, `w7`, will be made available as the jump host for accessing the cluster and as the main node for running the reproduction scripts. 
 
 * **The AEC may submit their SSH public key through a HotCRP comment.** After we have configured the key on our server, node7 will be accessible via the following command:
 
@@ -49,7 +49,7 @@ cd aefast26
 bash lock_cluster.sh "reviewer A"
 ```
 
-**Step 3:** Run the following script on `skv-node7`, including copying and compiling the code across multiple cluster nodes.
+**Step 3:** Run the following script on `w7`, including copying and compiling the code across multiple cluster nodes.
 
 ```shell
 bash build_ae.sh
