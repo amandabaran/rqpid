@@ -331,7 +331,7 @@ int main(const int argc, const char* argv[]) {
 
 	dmv->resetThread();
 	vector<future<uint64_t>> actual_ops;
-	uint64_t perload_ops = 1000000000;
+	uint64_t perload_ops = 100000000;
 	int tran_ops = 100000000;
 	int sum = 0;
 
@@ -347,7 +347,7 @@ int main(const int argc, const char* argv[]) {
 	dmv->barrier("init", config.ComputeNumber);
 
 	// per-load key-value entries
-	num_threads = 72;
+// num_threads = 72; // removed hardcode
 	uint64_t start = (dmv->getMyNodeID() % config.ComputeNumber) *
 	                 (perload_ops / config.ComputeNumber);
 	uint64_t thread_op = perload_ops / config.ComputeNumber / num_threads;

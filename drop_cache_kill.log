@@ -1,0 +1,45 @@
+========== Starting memory cleanup ==========
+========== [w1] ==========
+--- Before cleanup ---
+--- After cleanup ---
+========== [w2] ==========
+--- Before cleanup ---
+--- After cleanup ---
+========== [w3] ==========
+--- Before cleanup ---
+--- After cleanup ---
+========== [w4] ==========
+--- Before cleanup ---
+--- After cleanup ---
+========== [w5] ==========
+--- Before cleanup ---
+--- After cleanup ---
+========== [w6] ==========
+--- Before cleanup ---
+--- After cleanup ---
+========== [w7 - local] ==========
+--- Before cleanup ---
+PID	0.00 MB	COMMAND
+2774107	784.10 MB	MainThread
+2774564	555.54 MB	cpptools
+2441	151.57 MB	gnome-shell
+2774062	150.39 MB	MainThread
+2770643	138.44 MB	MainThread
+2770604	100.07 MB	MainThread
+2774118	85.38 MB	MainThread
+2774277	64.44 MB	MainThread
+2461	60.01 MB	mutter-x11-fram
+Killing PID 2774107 (VmRSS > 512MB)
+Killing PID 2774564 (VmRSS > 512MB)
+--- After cleanup ---
+PID	0.00 MB	COMMAND
+2441	151.57 MB	gnome-shell
+2774062	150.43 MB	MainThread
+2770643	138.44 MB	MainThread
+2770604	100.07 MB	MainThread
+2774118	85.38 MB	MainThread
+2461	60.01 MB	mutter-x11-fram
+2774134	58.81 MB	MainThread
+2774591	55.89 MB	MainThread
+2770654	55.18 MB	MainThread
+========== Cleanup complete ==========

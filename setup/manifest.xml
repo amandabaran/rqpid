@@ -1,0 +1,529 @@
+<rspec xmlns="http://www.geni.net/resources/rspec/3" xmlns:emulab="http://www.protogeni.net/resources/rspec/ext/emulab/1" xmlns:tour="http://www.protogeni.net/resources/rspec/ext/apt-tour/1" xmlns:jacks="http://www.protogeni.net/resources/rspec/ext/jacks/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.geni.net/resources/rspec/3    http://www.geni.net/resources/rspec/3/request.xsd" type="request">
+  <node xmlns:emulab="http://www.protogeni.net/resources/rspec/ext/emulab/1" client_id="node0" exclusive="true" component_manager_id="urn:publicid:IDN+utah.cloudlab.us+authority+cm" component_id="urn:publicid:IDN+utah.cloudlab.us+node+amd154" sliver_id="urn:publicid:IDN+utah.cloudlab.us+sliver+2409417">
+    <sliver_type name="raw-pc">
+      <disk_image name="urn:publicid:IDN+emulab.net+image+emulab-ops//UBUNTU24-64-STD"/>
+    </sliver_type>
+    <hardware_type name="c6525-25g"/>
+    <interface client_id="node0:eth1" component_id="urn:publicid:IDN+utah.cloudlab.us+interface+amd154:eth2" sliver_id="urn:publicid:IDN+utah.cloudlab.us+sliver+2409428" mac_address="0c42a1dd57d4">
+      <ip address="10.10.1.1" type="ipv4" netmask="255.255.255.0"/>
+    </interface>
+    <emulab:vnode name="amd154" hardware_type="c6525-25g"/>
+    <host name="node0.faa-c6525.hyflowtm-PG0.utah.cloudlab.us" ipv4="128.110.219.65"/>
+    <services>
+      <login authentication="ssh-keys" hostname="amd154.utah.cloudlab.us" port="22" username="balajia"/>
+      <login authentication="ssh-keys" hostname="amd154.utah.cloudlab.us" port="22" username="palmieri"/>
+      <login authentication="ssh-keys" hostname="amd154.utah.cloudlab.us" port="22" username="ltseng"/>
+      <login authentication="ssh-keys" hostname="amd154.utah.cloudlab.us" port="22" username="adb321"/>
+      <login authentication="ssh-keys" hostname="amd154.utah.cloudlab.us" port="22" username="ogrimes"/>
+      <login authentication="ssh-keys" hostname="amd154.utah.cloudlab.us" port="22" username="rdy221"/>
+      <login authentication="ssh-keys" hostname="amd154.utah.cloudlab.us" port="22" username="tsengle"/>
+      <login authentication="ssh-keys" hostname="amd154.utah.cloudlab.us" port="22" username="mfs409"/>
+      <login authentication="ssh-keys" hostname="amd154.utah.cloudlab.us" port="22" username="tuglu"/>
+      <login authentication="ssh-keys" hostname="amd154.utah.cloudlab.us" port="22" username="billyb"/>
+      <login authentication="ssh-keys" hostname="amd154.utah.cloudlab.us" port="22" username="kap325"/>
+      <login authentication="ssh-keys" hostname="amd154.utah.cloudlab.us" port="22" username="mlatva"/>
+      <login authentication="ssh-keys" hostname="amd154.utah.cloudlab.us" port="22" username="csiems"/>
+      <login authentication="ssh-keys" hostname="amd154.utah.cloudlab.us" port="22" username="darius"/>
+      <login authentication="ssh-keys" hostname="amd154.utah.cloudlab.us" port="22" username="alclev"/>
+      <login authentication="ssh-keys" hostname="amd154.utah.cloudlab.us" port="22" username="rishad"/>
+      <login authentication="ssh-keys" hostname="amd154.utah.cloudlab.us" port="22" username="Parthaw"/>
+      <login authentication="ssh-keys" hostname="amd154.utah.cloudlab.us" port="22" username="mpk225"/>
+      <login authentication="ssh-keys" hostname="amd154.utah.cloudlab.us" port="22" username="sheml"/>
+      <login authentication="ssh-keys" hostname="amd154.utah.cloudlab.us" port="22" username="ajbina"/>
+      <login authentication="ssh-keys" hostname="amd154.utah.cloudlab.us" port="22" username="Maxman"/>
+      <login authentication="ssh-keys" hostname="amd154.utah.cloudlab.us" port="22" username="WScott10"/>
+      <login authentication="ssh-keys" hostname="amd154.utah.cloudlab.us" port="22" username="vbalasu1"/>
+      <login authentication="ssh-keys" hostname="amd154.utah.cloudlab.us" port="22" username="stevie98"/>
+      <login authentication="ssh-keys" hostname="amd154.utah.cloudlab.us" port="22" username="haochen"/>
+      <login authentication="ssh-keys" hostname="amd154.utah.cloudlab.us" port="22" username="skb227"/>
+      <login authentication="ssh-keys" hostname="amd154.utah.cloudlab.us" port="22" username="Alexis"/>
+      <login authentication="ssh-keys" hostname="amd154.utah.cloudlab.us" port="22" username="tmt227"/>
+      <login authentication="ssh-keys" hostname="amd154.utah.cloudlab.us" port="22" username="jtw527"/>
+      <emulab:console server="boss.utah.cloudlab.us"/>
+      <emulab:recovery available="true"/>
+      <emulab:powercycle available="true"/>
+      <emulab:imageable available="true"/>
+    </services>
+  </node>
+  <node xmlns:emulab="http://www.protogeni.net/resources/rspec/ext/emulab/1" client_id="node1" exclusive="true" component_manager_id="urn:publicid:IDN+utah.cloudlab.us+authority+cm" component_id="urn:publicid:IDN+utah.cloudlab.us+node+amd148" sliver_id="urn:publicid:IDN+utah.cloudlab.us+sliver+2409422">
+    <sliver_type name="raw-pc">
+      <disk_image name="urn:publicid:IDN+emulab.net+image+emulab-ops//UBUNTU24-64-STD"/>
+    </sliver_type>
+    <hardware_type name="c6525-25g"/>
+    <interface client_id="node1:eth1" component_id="urn:publicid:IDN+utah.cloudlab.us+interface+amd148:eth2" sliver_id="urn:publicid:IDN+utah.cloudlab.us+sliver+2409429" mac_address="0c42a1dd5a14">
+      <ip address="10.10.1.2" type="ipv4" netmask="255.255.255.0"/>
+    </interface>
+    <emulab:vnode name="amd148" hardware_type="c6525-25g"/>
+    <host name="node1.faa-c6525.hyflowtm-PG0.utah.cloudlab.us" ipv4="128.110.219.59"/>
+    <services>
+      <login authentication="ssh-keys" hostname="amd148.utah.cloudlab.us" port="22" username="balajia"/>
+      <login authentication="ssh-keys" hostname="amd148.utah.cloudlab.us" port="22" username="palmieri"/>
+      <login authentication="ssh-keys" hostname="amd148.utah.cloudlab.us" port="22" username="ltseng"/>
+      <login authentication="ssh-keys" hostname="amd148.utah.cloudlab.us" port="22" username="adb321"/>
+      <login authentication="ssh-keys" hostname="amd148.utah.cloudlab.us" port="22" username="ogrimes"/>
+      <login authentication="ssh-keys" hostname="amd148.utah.cloudlab.us" port="22" username="rdy221"/>
+      <login authentication="ssh-keys" hostname="amd148.utah.cloudlab.us" port="22" username="tsengle"/>
+      <login authentication="ssh-keys" hostname="amd148.utah.cloudlab.us" port="22" username="mfs409"/>
+      <login authentication="ssh-keys" hostname="amd148.utah.cloudlab.us" port="22" username="tuglu"/>
+      <login authentication="ssh-keys" hostname="amd148.utah.cloudlab.us" port="22" username="billyb"/>
+      <login authentication="ssh-keys" hostname="amd148.utah.cloudlab.us" port="22" username="kap325"/>
+      <login authentication="ssh-keys" hostname="amd148.utah.cloudlab.us" port="22" username="mlatva"/>
+      <login authentication="ssh-keys" hostname="amd148.utah.cloudlab.us" port="22" username="csiems"/>
+      <login authentication="ssh-keys" hostname="amd148.utah.cloudlab.us" port="22" username="darius"/>
+      <login authentication="ssh-keys" hostname="amd148.utah.cloudlab.us" port="22" username="alclev"/>
+      <login authentication="ssh-keys" hostname="amd148.utah.cloudlab.us" port="22" username="rishad"/>
+      <login authentication="ssh-keys" hostname="amd148.utah.cloudlab.us" port="22" username="Parthaw"/>
+      <login authentication="ssh-keys" hostname="amd148.utah.cloudlab.us" port="22" username="mpk225"/>
+      <login authentication="ssh-keys" hostname="amd148.utah.cloudlab.us" port="22" username="sheml"/>
+      <login authentication="ssh-keys" hostname="amd148.utah.cloudlab.us" port="22" username="ajbina"/>
+      <login authentication="ssh-keys" hostname="amd148.utah.cloudlab.us" port="22" username="Maxman"/>
+      <login authentication="ssh-keys" hostname="amd148.utah.cloudlab.us" port="22" username="WScott10"/>
+      <login authentication="ssh-keys" hostname="amd148.utah.cloudlab.us" port="22" username="vbalasu1"/>
+      <login authentication="ssh-keys" hostname="amd148.utah.cloudlab.us" port="22" username="stevie98"/>
+      <login authentication="ssh-keys" hostname="amd148.utah.cloudlab.us" port="22" username="haochen"/>
+      <login authentication="ssh-keys" hostname="amd148.utah.cloudlab.us" port="22" username="skb227"/>
+      <login authentication="ssh-keys" hostname="amd148.utah.cloudlab.us" port="22" username="Alexis"/>
+      <login authentication="ssh-keys" hostname="amd148.utah.cloudlab.us" port="22" username="tmt227"/>
+      <login authentication="ssh-keys" hostname="amd148.utah.cloudlab.us" port="22" username="jtw527"/>
+      <emulab:console server="boss.utah.cloudlab.us"/>
+      <emulab:recovery available="true"/>
+      <emulab:powercycle available="true"/>
+      <emulab:imageable available="true"/>
+    </services>
+  </node>
+  <node xmlns:emulab="http://www.protogeni.net/resources/rspec/ext/emulab/1" client_id="node2" exclusive="true" component_manager_id="urn:publicid:IDN+utah.cloudlab.us+authority+cm" component_id="urn:publicid:IDN+utah.cloudlab.us+node+amd150" sliver_id="urn:publicid:IDN+utah.cloudlab.us+sliver+2409424">
+    <sliver_type name="raw-pc">
+      <disk_image name="urn:publicid:IDN+emulab.net+image+emulab-ops//UBUNTU24-64-STD"/>
+    </sliver_type>
+    <hardware_type name="c6525-25g"/>
+    <interface client_id="node2:eth1" component_id="urn:publicid:IDN+utah.cloudlab.us+interface+amd150:eth2" sliver_id="urn:publicid:IDN+utah.cloudlab.us+sliver+2409430" mac_address="0c42a1e2a6b4">
+      <ip address="10.10.1.3" type="ipv4" netmask="255.255.255.0"/>
+    </interface>
+    <emulab:vnode name="amd150" hardware_type="c6525-25g"/>
+    <host name="node2.faa-c6525.hyflowtm-PG0.utah.cloudlab.us" ipv4="128.110.219.61"/>
+    <services>
+      <login authentication="ssh-keys" hostname="amd150.utah.cloudlab.us" port="22" username="balajia"/>
+      <login authentication="ssh-keys" hostname="amd150.utah.cloudlab.us" port="22" username="palmieri"/>
+      <login authentication="ssh-keys" hostname="amd150.utah.cloudlab.us" port="22" username="ltseng"/>
+      <login authentication="ssh-keys" hostname="amd150.utah.cloudlab.us" port="22" username="adb321"/>
+      <login authentication="ssh-keys" hostname="amd150.utah.cloudlab.us" port="22" username="ogrimes"/>
+      <login authentication="ssh-keys" hostname="amd150.utah.cloudlab.us" port="22" username="rdy221"/>
+      <login authentication="ssh-keys" hostname="amd150.utah.cloudlab.us" port="22" username="tsengle"/>
+      <login authentication="ssh-keys" hostname="amd150.utah.cloudlab.us" port="22" username="mfs409"/>
+      <login authentication="ssh-keys" hostname="amd150.utah.cloudlab.us" port="22" username="tuglu"/>
+      <login authentication="ssh-keys" hostname="amd150.utah.cloudlab.us" port="22" username="billyb"/>
+      <login authentication="ssh-keys" hostname="amd150.utah.cloudlab.us" port="22" username="kap325"/>
+      <login authentication="ssh-keys" hostname="amd150.utah.cloudlab.us" port="22" username="mlatva"/>
+      <login authentication="ssh-keys" hostname="amd150.utah.cloudlab.us" port="22" username="csiems"/>
+      <login authentication="ssh-keys" hostname="amd150.utah.cloudlab.us" port="22" username="darius"/>
+      <login authentication="ssh-keys" hostname="amd150.utah.cloudlab.us" port="22" username="alclev"/>
+      <login authentication="ssh-keys" hostname="amd150.utah.cloudlab.us" port="22" username="rishad"/>
+      <login authentication="ssh-keys" hostname="amd150.utah.cloudlab.us" port="22" username="Parthaw"/>
+      <login authentication="ssh-keys" hostname="amd150.utah.cloudlab.us" port="22" username="mpk225"/>
+      <login authentication="ssh-keys" hostname="amd150.utah.cloudlab.us" port="22" username="sheml"/>
+      <login authentication="ssh-keys" hostname="amd150.utah.cloudlab.us" port="22" username="ajbina"/>
+      <login authentication="ssh-keys" hostname="amd150.utah.cloudlab.us" port="22" username="Maxman"/>
+      <login authentication="ssh-keys" hostname="amd150.utah.cloudlab.us" port="22" username="WScott10"/>
+      <login authentication="ssh-keys" hostname="amd150.utah.cloudlab.us" port="22" username="vbalasu1"/>
+      <login authentication="ssh-keys" hostname="amd150.utah.cloudlab.us" port="22" username="stevie98"/>
+      <login authentication="ssh-keys" hostname="amd150.utah.cloudlab.us" port="22" username="haochen"/>
+      <login authentication="ssh-keys" hostname="amd150.utah.cloudlab.us" port="22" username="skb227"/>
+      <login authentication="ssh-keys" hostname="amd150.utah.cloudlab.us" port="22" username="Alexis"/>
+      <login authentication="ssh-keys" hostname="amd150.utah.cloudlab.us" port="22" username="tmt227"/>
+      <login authentication="ssh-keys" hostname="amd150.utah.cloudlab.us" port="22" username="jtw527"/>
+      <emulab:console server="boss.utah.cloudlab.us"/>
+      <emulab:recovery available="true"/>
+      <emulab:powercycle available="true"/>
+      <emulab:imageable available="true"/>
+    </services>
+  </node>
+  <node xmlns:emulab="http://www.protogeni.net/resources/rspec/ext/emulab/1" client_id="node3" exclusive="true" component_manager_id="urn:publicid:IDN+utah.cloudlab.us+authority+cm" component_id="urn:publicid:IDN+utah.cloudlab.us+node+amd140" sliver_id="urn:publicid:IDN+utah.cloudlab.us+sliver+2409423">
+    <sliver_type name="raw-pc">
+      <disk_image name="urn:publicid:IDN+emulab.net+image+emulab-ops//UBUNTU24-64-STD"/>
+    </sliver_type>
+    <hardware_type name="c6525-25g"/>
+    <interface client_id="node3:eth1" component_id="urn:publicid:IDN+utah.cloudlab.us+interface+amd140:eth2" sliver_id="urn:publicid:IDN+utah.cloudlab.us+sliver+2409431" mac_address="0c42a1dd57f8">
+      <ip address="10.10.1.4" type="ipv4" netmask="255.255.255.0"/>
+    </interface>
+    <emulab:vnode name="amd140" hardware_type="c6525-25g"/>
+    <host name="node3.faa-c6525.hyflowtm-PG0.utah.cloudlab.us" ipv4="128.110.219.51"/>
+    <services>
+      <login authentication="ssh-keys" hostname="amd140.utah.cloudlab.us" port="22" username="balajia"/>
+      <login authentication="ssh-keys" hostname="amd140.utah.cloudlab.us" port="22" username="palmieri"/>
+      <login authentication="ssh-keys" hostname="amd140.utah.cloudlab.us" port="22" username="ltseng"/>
+      <login authentication="ssh-keys" hostname="amd140.utah.cloudlab.us" port="22" username="adb321"/>
+      <login authentication="ssh-keys" hostname="amd140.utah.cloudlab.us" port="22" username="ogrimes"/>
+      <login authentication="ssh-keys" hostname="amd140.utah.cloudlab.us" port="22" username="rdy221"/>
+      <login authentication="ssh-keys" hostname="amd140.utah.cloudlab.us" port="22" username="tsengle"/>
+      <login authentication="ssh-keys" hostname="amd140.utah.cloudlab.us" port="22" username="mfs409"/>
+      <login authentication="ssh-keys" hostname="amd140.utah.cloudlab.us" port="22" username="tuglu"/>
+      <login authentication="ssh-keys" hostname="amd140.utah.cloudlab.us" port="22" username="billyb"/>
+      <login authentication="ssh-keys" hostname="amd140.utah.cloudlab.us" port="22" username="kap325"/>
+      <login authentication="ssh-keys" hostname="amd140.utah.cloudlab.us" port="22" username="mlatva"/>
+      <login authentication="ssh-keys" hostname="amd140.utah.cloudlab.us" port="22" username="csiems"/>
+      <login authentication="ssh-keys" hostname="amd140.utah.cloudlab.us" port="22" username="darius"/>
+      <login authentication="ssh-keys" hostname="amd140.utah.cloudlab.us" port="22" username="alclev"/>
+      <login authentication="ssh-keys" hostname="amd140.utah.cloudlab.us" port="22" username="rishad"/>
+      <login authentication="ssh-keys" hostname="amd140.utah.cloudlab.us" port="22" username="Parthaw"/>
+      <login authentication="ssh-keys" hostname="amd140.utah.cloudlab.us" port="22" username="mpk225"/>
+      <login authentication="ssh-keys" hostname="amd140.utah.cloudlab.us" port="22" username="sheml"/>
+      <login authentication="ssh-keys" hostname="amd140.utah.cloudlab.us" port="22" username="ajbina"/>
+      <login authentication="ssh-keys" hostname="amd140.utah.cloudlab.us" port="22" username="Maxman"/>
+      <login authentication="ssh-keys" hostname="amd140.utah.cloudlab.us" port="22" username="WScott10"/>
+      <login authentication="ssh-keys" hostname="amd140.utah.cloudlab.us" port="22" username="vbalasu1"/>
+      <login authentication="ssh-keys" hostname="amd140.utah.cloudlab.us" port="22" username="stevie98"/>
+      <login authentication="ssh-keys" hostname="amd140.utah.cloudlab.us" port="22" username="haochen"/>
+      <login authentication="ssh-keys" hostname="amd140.utah.cloudlab.us" port="22" username="skb227"/>
+      <login authentication="ssh-keys" hostname="amd140.utah.cloudlab.us" port="22" username="Alexis"/>
+      <login authentication="ssh-keys" hostname="amd140.utah.cloudlab.us" port="22" username="tmt227"/>
+      <login authentication="ssh-keys" hostname="amd140.utah.cloudlab.us" port="22" username="jtw527"/>
+      <emulab:console server="boss.utah.cloudlab.us"/>
+      <emulab:recovery available="true"/>
+      <emulab:powercycle available="true"/>
+      <emulab:imageable available="true"/>
+    </services>
+  </node>
+  <node xmlns:emulab="http://www.protogeni.net/resources/rspec/ext/emulab/1" client_id="node4" exclusive="true" component_manager_id="urn:publicid:IDN+utah.cloudlab.us+authority+cm" component_id="urn:publicid:IDN+utah.cloudlab.us+node+amd163" sliver_id="urn:publicid:IDN+utah.cloudlab.us+sliver+2409421">
+    <sliver_type name="raw-pc">
+      <disk_image name="urn:publicid:IDN+emulab.net+image+emulab-ops//UBUNTU24-64-STD"/>
+    </sliver_type>
+    <hardware_type name="c6525-25g"/>
+    <interface client_id="node4:eth1" component_id="urn:publicid:IDN+utah.cloudlab.us+interface+amd163:eth2" sliver_id="urn:publicid:IDN+utah.cloudlab.us+sliver+2409432" mac_address="0c42a1dd5c0c">
+      <ip address="10.10.1.5" type="ipv4" netmask="255.255.255.0"/>
+    </interface>
+    <emulab:vnode name="amd163" hardware_type="c6525-25g"/>
+    <host name="node4.faa-c6525.hyflowtm-PG0.utah.cloudlab.us" ipv4="128.110.219.74"/>
+    <services>
+      <login authentication="ssh-keys" hostname="amd163.utah.cloudlab.us" port="22" username="balajia"/>
+      <login authentication="ssh-keys" hostname="amd163.utah.cloudlab.us" port="22" username="palmieri"/>
+      <login authentication="ssh-keys" hostname="amd163.utah.cloudlab.us" port="22" username="ltseng"/>
+      <login authentication="ssh-keys" hostname="amd163.utah.cloudlab.us" port="22" username="adb321"/>
+      <login authentication="ssh-keys" hostname="amd163.utah.cloudlab.us" port="22" username="ogrimes"/>
+      <login authentication="ssh-keys" hostname="amd163.utah.cloudlab.us" port="22" username="rdy221"/>
+      <login authentication="ssh-keys" hostname="amd163.utah.cloudlab.us" port="22" username="tsengle"/>
+      <login authentication="ssh-keys" hostname="amd163.utah.cloudlab.us" port="22" username="mfs409"/>
+      <login authentication="ssh-keys" hostname="amd163.utah.cloudlab.us" port="22" username="tuglu"/>
+      <login authentication="ssh-keys" hostname="amd163.utah.cloudlab.us" port="22" username="billyb"/>
+      <login authentication="ssh-keys" hostname="amd163.utah.cloudlab.us" port="22" username="kap325"/>
+      <login authentication="ssh-keys" hostname="amd163.utah.cloudlab.us" port="22" username="mlatva"/>
+      <login authentication="ssh-keys" hostname="amd163.utah.cloudlab.us" port="22" username="csiems"/>
+      <login authentication="ssh-keys" hostname="amd163.utah.cloudlab.us" port="22" username="darius"/>
+      <login authentication="ssh-keys" hostname="amd163.utah.cloudlab.us" port="22" username="alclev"/>
+      <login authentication="ssh-keys" hostname="amd163.utah.cloudlab.us" port="22" username="rishad"/>
+      <login authentication="ssh-keys" hostname="amd163.utah.cloudlab.us" port="22" username="Parthaw"/>
+      <login authentication="ssh-keys" hostname="amd163.utah.cloudlab.us" port="22" username="mpk225"/>
+      <login authentication="ssh-keys" hostname="amd163.utah.cloudlab.us" port="22" username="sheml"/>
+      <login authentication="ssh-keys" hostname="amd163.utah.cloudlab.us" port="22" username="ajbina"/>
+      <login authentication="ssh-keys" hostname="amd163.utah.cloudlab.us" port="22" username="Maxman"/>
+      <login authentication="ssh-keys" hostname="amd163.utah.cloudlab.us" port="22" username="WScott10"/>
+      <login authentication="ssh-keys" hostname="amd163.utah.cloudlab.us" port="22" username="vbalasu1"/>
+      <login authentication="ssh-keys" hostname="amd163.utah.cloudlab.us" port="22" username="stevie98"/>
+      <login authentication="ssh-keys" hostname="amd163.utah.cloudlab.us" port="22" username="haochen"/>
+      <login authentication="ssh-keys" hostname="amd163.utah.cloudlab.us" port="22" username="skb227"/>
+      <login authentication="ssh-keys" hostname="amd163.utah.cloudlab.us" port="22" username="Alexis"/>
+      <login authentication="ssh-keys" hostname="amd163.utah.cloudlab.us" port="22" username="tmt227"/>
+      <login authentication="ssh-keys" hostname="amd163.utah.cloudlab.us" port="22" username="jtw527"/>
+      <emulab:console server="boss.utah.cloudlab.us"/>
+      <emulab:recovery available="true"/>
+      <emulab:powercycle available="true"/>
+      <emulab:imageable available="true"/>
+    </services>
+  </node>
+  <node xmlns:emulab="http://www.protogeni.net/resources/rspec/ext/emulab/1" client_id="node5" exclusive="true" component_manager_id="urn:publicid:IDN+utah.cloudlab.us+authority+cm" component_id="urn:publicid:IDN+utah.cloudlab.us+node+amd132" sliver_id="urn:publicid:IDN+utah.cloudlab.us+sliver+2409418">
+    <sliver_type name="raw-pc">
+      <disk_image name="urn:publicid:IDN+emulab.net+image+emulab-ops//UBUNTU24-64-STD"/>
+    </sliver_type>
+    <hardware_type name="c6525-25g"/>
+    <interface client_id="node5:eth1" component_id="urn:publicid:IDN+utah.cloudlab.us+interface+amd132:eth2" sliver_id="urn:publicid:IDN+utah.cloudlab.us+sliver+2409433" mac_address="0c42a1dd5a58">
+      <ip address="10.10.1.6" type="ipv4" netmask="255.255.255.0"/>
+    </interface>
+    <emulab:vnode name="amd132" hardware_type="c6525-25g"/>
+    <host name="node5.faa-c6525.hyflowtm-PG0.utah.cloudlab.us" ipv4="128.110.219.43"/>
+    <services>
+      <login authentication="ssh-keys" hostname="amd132.utah.cloudlab.us" port="22" username="balajia"/>
+      <login authentication="ssh-keys" hostname="amd132.utah.cloudlab.us" port="22" username="palmieri"/>
+      <login authentication="ssh-keys" hostname="amd132.utah.cloudlab.us" port="22" username="ltseng"/>
+      <login authentication="ssh-keys" hostname="amd132.utah.cloudlab.us" port="22" username="adb321"/>
+      <login authentication="ssh-keys" hostname="amd132.utah.cloudlab.us" port="22" username="ogrimes"/>
+      <login authentication="ssh-keys" hostname="amd132.utah.cloudlab.us" port="22" username="rdy221"/>
+      <login authentication="ssh-keys" hostname="amd132.utah.cloudlab.us" port="22" username="tsengle"/>
+      <login authentication="ssh-keys" hostname="amd132.utah.cloudlab.us" port="22" username="mfs409"/>
+      <login authentication="ssh-keys" hostname="amd132.utah.cloudlab.us" port="22" username="tuglu"/>
+      <login authentication="ssh-keys" hostname="amd132.utah.cloudlab.us" port="22" username="billyb"/>
+      <login authentication="ssh-keys" hostname="amd132.utah.cloudlab.us" port="22" username="kap325"/>
+      <login authentication="ssh-keys" hostname="amd132.utah.cloudlab.us" port="22" username="mlatva"/>
+      <login authentication="ssh-keys" hostname="amd132.utah.cloudlab.us" port="22" username="csiems"/>
+      <login authentication="ssh-keys" hostname="amd132.utah.cloudlab.us" port="22" username="darius"/>
+      <login authentication="ssh-keys" hostname="amd132.utah.cloudlab.us" port="22" username="alclev"/>
+      <login authentication="ssh-keys" hostname="amd132.utah.cloudlab.us" port="22" username="rishad"/>
+      <login authentication="ssh-keys" hostname="amd132.utah.cloudlab.us" port="22" username="Parthaw"/>
+      <login authentication="ssh-keys" hostname="amd132.utah.cloudlab.us" port="22" username="mpk225"/>
+      <login authentication="ssh-keys" hostname="amd132.utah.cloudlab.us" port="22" username="sheml"/>
+      <login authentication="ssh-keys" hostname="amd132.utah.cloudlab.us" port="22" username="ajbina"/>
+      <login authentication="ssh-keys" hostname="amd132.utah.cloudlab.us" port="22" username="Maxman"/>
+      <login authentication="ssh-keys" hostname="amd132.utah.cloudlab.us" port="22" username="WScott10"/>
+      <login authentication="ssh-keys" hostname="amd132.utah.cloudlab.us" port="22" username="vbalasu1"/>
+      <login authentication="ssh-keys" hostname="amd132.utah.cloudlab.us" port="22" username="stevie98"/>
+      <login authentication="ssh-keys" hostname="amd132.utah.cloudlab.us" port="22" username="haochen"/>
+      <login authentication="ssh-keys" hostname="amd132.utah.cloudlab.us" port="22" username="skb227"/>
+      <login authentication="ssh-keys" hostname="amd132.utah.cloudlab.us" port="22" username="Alexis"/>
+      <login authentication="ssh-keys" hostname="amd132.utah.cloudlab.us" port="22" username="tmt227"/>
+      <login authentication="ssh-keys" hostname="amd132.utah.cloudlab.us" port="22" username="jtw527"/>
+      <emulab:console server="boss.utah.cloudlab.us"/>
+      <emulab:recovery available="true"/>
+      <emulab:powercycle available="true"/>
+      <emulab:imageable available="true"/>
+    </services>
+  </node>
+  <node xmlns:emulab="http://www.protogeni.net/resources/rspec/ext/emulab/1" client_id="node6" exclusive="true" component_manager_id="urn:publicid:IDN+utah.cloudlab.us+authority+cm" component_id="urn:publicid:IDN+utah.cloudlab.us+node+amd151" sliver_id="urn:publicid:IDN+utah.cloudlab.us+sliver+2409416">
+    <sliver_type name="raw-pc">
+      <disk_image name="urn:publicid:IDN+emulab.net+image+emulab-ops//UBUNTU24-64-STD"/>
+    </sliver_type>
+    <hardware_type name="c6525-25g"/>
+    <interface client_id="node6:eth1" component_id="urn:publicid:IDN+utah.cloudlab.us+interface+amd151:eth2" sliver_id="urn:publicid:IDN+utah.cloudlab.us+sliver+2409434" mac_address="0c42a1e2a69c">
+      <ip address="10.10.1.7" type="ipv4" netmask="255.255.255.0"/>
+    </interface>
+    <emulab:vnode name="amd151" hardware_type="c6525-25g"/>
+    <host name="node6.faa-c6525.hyflowtm-PG0.utah.cloudlab.us" ipv4="128.110.219.62"/>
+    <services>
+      <login authentication="ssh-keys" hostname="amd151.utah.cloudlab.us" port="22" username="balajia"/>
+      <login authentication="ssh-keys" hostname="amd151.utah.cloudlab.us" port="22" username="palmieri"/>
+      <login authentication="ssh-keys" hostname="amd151.utah.cloudlab.us" port="22" username="ltseng"/>
+      <login authentication="ssh-keys" hostname="amd151.utah.cloudlab.us" port="22" username="adb321"/>
+      <login authentication="ssh-keys" hostname="amd151.utah.cloudlab.us" port="22" username="ogrimes"/>
+      <login authentication="ssh-keys" hostname="amd151.utah.cloudlab.us" port="22" username="rdy221"/>
+      <login authentication="ssh-keys" hostname="amd151.utah.cloudlab.us" port="22" username="tsengle"/>
+      <login authentication="ssh-keys" hostname="amd151.utah.cloudlab.us" port="22" username="mfs409"/>
+      <login authentication="ssh-keys" hostname="amd151.utah.cloudlab.us" port="22" username="tuglu"/>
+      <login authentication="ssh-keys" hostname="amd151.utah.cloudlab.us" port="22" username="billyb"/>
+      <login authentication="ssh-keys" hostname="amd151.utah.cloudlab.us" port="22" username="kap325"/>
+      <login authentication="ssh-keys" hostname="amd151.utah.cloudlab.us" port="22" username="mlatva"/>
+      <login authentication="ssh-keys" hostname="amd151.utah.cloudlab.us" port="22" username="csiems"/>
+      <login authentication="ssh-keys" hostname="amd151.utah.cloudlab.us" port="22" username="darius"/>
+      <login authentication="ssh-keys" hostname="amd151.utah.cloudlab.us" port="22" username="alclev"/>
+      <login authentication="ssh-keys" hostname="amd151.utah.cloudlab.us" port="22" username="rishad"/>
+      <login authentication="ssh-keys" hostname="amd151.utah.cloudlab.us" port="22" username="Parthaw"/>
+      <login authentication="ssh-keys" hostname="amd151.utah.cloudlab.us" port="22" username="mpk225"/>
+      <login authentication="ssh-keys" hostname="amd151.utah.cloudlab.us" port="22" username="sheml"/>
+      <login authentication="ssh-keys" hostname="amd151.utah.cloudlab.us" port="22" username="ajbina"/>
+      <login authentication="ssh-keys" hostname="amd151.utah.cloudlab.us" port="22" username="Maxman"/>
+      <login authentication="ssh-keys" hostname="amd151.utah.cloudlab.us" port="22" username="WScott10"/>
+      <login authentication="ssh-keys" hostname="amd151.utah.cloudlab.us" port="22" username="vbalasu1"/>
+      <login authentication="ssh-keys" hostname="amd151.utah.cloudlab.us" port="22" username="stevie98"/>
+      <login authentication="ssh-keys" hostname="amd151.utah.cloudlab.us" port="22" username="haochen"/>
+      <login authentication="ssh-keys" hostname="amd151.utah.cloudlab.us" port="22" username="skb227"/>
+      <login authentication="ssh-keys" hostname="amd151.utah.cloudlab.us" port="22" username="Alexis"/>
+      <login authentication="ssh-keys" hostname="amd151.utah.cloudlab.us" port="22" username="tmt227"/>
+      <login authentication="ssh-keys" hostname="amd151.utah.cloudlab.us" port="22" username="jtw527"/>
+      <emulab:console server="boss.utah.cloudlab.us"/>
+      <emulab:recovery available="true"/>
+      <emulab:powercycle available="true"/>
+      <emulab:imageable available="true"/>
+    </services>
+  </node>
+  <node xmlns:emulab="http://www.protogeni.net/resources/rspec/ext/emulab/1" client_id="node7" exclusive="true" component_manager_id="urn:publicid:IDN+utah.cloudlab.us+authority+cm" component_id="urn:publicid:IDN+utah.cloudlab.us+node+amd155" sliver_id="urn:publicid:IDN+utah.cloudlab.us+sliver+2409420">
+    <sliver_type name="raw-pc">
+      <disk_image name="urn:publicid:IDN+emulab.net+image+emulab-ops//UBUNTU24-64-STD"/>
+    </sliver_type>
+    <hardware_type name="c6525-25g"/>
+    <interface client_id="node7:eth1" component_id="urn:publicid:IDN+utah.cloudlab.us+interface+amd155:eth2" sliver_id="urn:publicid:IDN+utah.cloudlab.us+sliver+2409435" mac_address="0c42a1dd58fc">
+      <ip address="10.10.1.8" type="ipv4" netmask="255.255.255.0"/>
+    </interface>
+    <emulab:vnode name="amd155" hardware_type="c6525-25g"/>
+    <host name="node7.faa-c6525.hyflowtm-PG0.utah.cloudlab.us" ipv4="128.110.219.66"/>
+    <services>
+      <login authentication="ssh-keys" hostname="amd155.utah.cloudlab.us" port="22" username="balajia"/>
+      <login authentication="ssh-keys" hostname="amd155.utah.cloudlab.us" port="22" username="palmieri"/>
+      <login authentication="ssh-keys" hostname="amd155.utah.cloudlab.us" port="22" username="ltseng"/>
+      <login authentication="ssh-keys" hostname="amd155.utah.cloudlab.us" port="22" username="adb321"/>
+      <login authentication="ssh-keys" hostname="amd155.utah.cloudlab.us" port="22" username="ogrimes"/>
+      <login authentication="ssh-keys" hostname="amd155.utah.cloudlab.us" port="22" username="rdy221"/>
+      <login authentication="ssh-keys" hostname="amd155.utah.cloudlab.us" port="22" username="tsengle"/>
+      <login authentication="ssh-keys" hostname="amd155.utah.cloudlab.us" port="22" username="mfs409"/>
+      <login authentication="ssh-keys" hostname="amd155.utah.cloudlab.us" port="22" username="tuglu"/>
+      <login authentication="ssh-keys" hostname="amd155.utah.cloudlab.us" port="22" username="billyb"/>
+      <login authentication="ssh-keys" hostname="amd155.utah.cloudlab.us" port="22" username="kap325"/>
+      <login authentication="ssh-keys" hostname="amd155.utah.cloudlab.us" port="22" username="mlatva"/>
+      <login authentication="ssh-keys" hostname="amd155.utah.cloudlab.us" port="22" username="csiems"/>
+      <login authentication="ssh-keys" hostname="amd155.utah.cloudlab.us" port="22" username="darius"/>
+      <login authentication="ssh-keys" hostname="amd155.utah.cloudlab.us" port="22" username="alclev"/>
+      <login authentication="ssh-keys" hostname="amd155.utah.cloudlab.us" port="22" username="rishad"/>
+      <login authentication="ssh-keys" hostname="amd155.utah.cloudlab.us" port="22" username="Parthaw"/>
+      <login authentication="ssh-keys" hostname="amd155.utah.cloudlab.us" port="22" username="mpk225"/>
+      <login authentication="ssh-keys" hostname="amd155.utah.cloudlab.us" port="22" username="sheml"/>
+      <login authentication="ssh-keys" hostname="amd155.utah.cloudlab.us" port="22" username="ajbina"/>
+      <login authentication="ssh-keys" hostname="amd155.utah.cloudlab.us" port="22" username="Maxman"/>
+      <login authentication="ssh-keys" hostname="amd155.utah.cloudlab.us" port="22" username="WScott10"/>
+      <login authentication="ssh-keys" hostname="amd155.utah.cloudlab.us" port="22" username="vbalasu1"/>
+      <login authentication="ssh-keys" hostname="amd155.utah.cloudlab.us" port="22" username="stevie98"/>
+      <login authentication="ssh-keys" hostname="amd155.utah.cloudlab.us" port="22" username="haochen"/>
+      <login authentication="ssh-keys" hostname="amd155.utah.cloudlab.us" port="22" username="skb227"/>
+      <login authentication="ssh-keys" hostname="amd155.utah.cloudlab.us" port="22" username="Alexis"/>
+      <login authentication="ssh-keys" hostname="amd155.utah.cloudlab.us" port="22" username="tmt227"/>
+      <login authentication="ssh-keys" hostname="amd155.utah.cloudlab.us" port="22" username="jtw527"/>
+      <emulab:console server="boss.utah.cloudlab.us"/>
+      <emulab:recovery available="true"/>
+      <emulab:powercycle available="true"/>
+      <emulab:imageable available="true"/>
+    </services>
+  </node>
+  <node xmlns:emulab="http://www.protogeni.net/resources/rspec/ext/emulab/1" client_id="node8" exclusive="true" component_manager_id="urn:publicid:IDN+utah.cloudlab.us+authority+cm" component_id="urn:publicid:IDN+utah.cloudlab.us+node+amd147" sliver_id="urn:publicid:IDN+utah.cloudlab.us+sliver+2409419">
+    <sliver_type name="raw-pc">
+      <disk_image name="urn:publicid:IDN+emulab.net+image+emulab-ops//UBUNTU24-64-STD"/>
+    </sliver_type>
+    <hardware_type name="c6525-25g"/>
+    <interface client_id="node8:eth1" component_id="urn:publicid:IDN+utah.cloudlab.us+interface+amd147:eth2" sliver_id="urn:publicid:IDN+utah.cloudlab.us+sliver+2409436" mac_address="0c42a1d6fd38">
+      <ip address="10.10.1.9" type="ipv4" netmask="255.255.255.0"/>
+    </interface>
+    <emulab:vnode name="amd147" hardware_type="c6525-25g"/>
+    <host name="node8.faa-c6525.hyflowtm-PG0.utah.cloudlab.us" ipv4="128.110.219.58"/>
+    <services>
+      <login authentication="ssh-keys" hostname="amd147.utah.cloudlab.us" port="22" username="balajia"/>
+      <login authentication="ssh-keys" hostname="amd147.utah.cloudlab.us" port="22" username="palmieri"/>
+      <login authentication="ssh-keys" hostname="amd147.utah.cloudlab.us" port="22" username="ltseng"/>
+      <login authentication="ssh-keys" hostname="amd147.utah.cloudlab.us" port="22" username="adb321"/>
+      <login authentication="ssh-keys" hostname="amd147.utah.cloudlab.us" port="22" username="ogrimes"/>
+      <login authentication="ssh-keys" hostname="amd147.utah.cloudlab.us" port="22" username="rdy221"/>
+      <login authentication="ssh-keys" hostname="amd147.utah.cloudlab.us" port="22" username="tsengle"/>
+      <login authentication="ssh-keys" hostname="amd147.utah.cloudlab.us" port="22" username="mfs409"/>
+      <login authentication="ssh-keys" hostname="amd147.utah.cloudlab.us" port="22" username="tuglu"/>
+      <login authentication="ssh-keys" hostname="amd147.utah.cloudlab.us" port="22" username="billyb"/>
+      <login authentication="ssh-keys" hostname="amd147.utah.cloudlab.us" port="22" username="kap325"/>
+      <login authentication="ssh-keys" hostname="amd147.utah.cloudlab.us" port="22" username="mlatva"/>
+      <login authentication="ssh-keys" hostname="amd147.utah.cloudlab.us" port="22" username="csiems"/>
+      <login authentication="ssh-keys" hostname="amd147.utah.cloudlab.us" port="22" username="darius"/>
+      <login authentication="ssh-keys" hostname="amd147.utah.cloudlab.us" port="22" username="alclev"/>
+      <login authentication="ssh-keys" hostname="amd147.utah.cloudlab.us" port="22" username="rishad"/>
+      <login authentication="ssh-keys" hostname="amd147.utah.cloudlab.us" port="22" username="Parthaw"/>
+      <login authentication="ssh-keys" hostname="amd147.utah.cloudlab.us" port="22" username="mpk225"/>
+      <login authentication="ssh-keys" hostname="amd147.utah.cloudlab.us" port="22" username="sheml"/>
+      <login authentication="ssh-keys" hostname="amd147.utah.cloudlab.us" port="22" username="ajbina"/>
+      <login authentication="ssh-keys" hostname="amd147.utah.cloudlab.us" port="22" username="Maxman"/>
+      <login authentication="ssh-keys" hostname="amd147.utah.cloudlab.us" port="22" username="WScott10"/>
+      <login authentication="ssh-keys" hostname="amd147.utah.cloudlab.us" port="22" username="vbalasu1"/>
+      <login authentication="ssh-keys" hostname="amd147.utah.cloudlab.us" port="22" username="stevie98"/>
+      <login authentication="ssh-keys" hostname="amd147.utah.cloudlab.us" port="22" username="haochen"/>
+      <login authentication="ssh-keys" hostname="amd147.utah.cloudlab.us" port="22" username="skb227"/>
+      <login authentication="ssh-keys" hostname="amd147.utah.cloudlab.us" port="22" username="Alexis"/>
+      <login authentication="ssh-keys" hostname="amd147.utah.cloudlab.us" port="22" username="tmt227"/>
+      <login authentication="ssh-keys" hostname="amd147.utah.cloudlab.us" port="22" username="jtw527"/>
+      <emulab:console server="boss.utah.cloudlab.us"/>
+      <emulab:recovery available="true"/>
+      <emulab:powercycle available="true"/>
+      <emulab:imageable available="true"/>
+    </services>
+  </node>
+  <node xmlns:emulab="http://www.protogeni.net/resources/rspec/ext/emulab/1" client_id="node9" exclusive="true" component_manager_id="urn:publicid:IDN+utah.cloudlab.us+authority+cm" component_id="urn:publicid:IDN+utah.cloudlab.us+node+amd165" sliver_id="urn:publicid:IDN+utah.cloudlab.us+sliver+2409425">
+    <sliver_type name="raw-pc">
+      <disk_image name="urn:publicid:IDN+emulab.net+image+emulab-ops//UBUNTU24-64-STD"/>
+    </sliver_type>
+    <hardware_type name="c6525-25g"/>
+    <interface client_id="node9:eth1" component_id="urn:publicid:IDN+utah.cloudlab.us+interface+amd165:eth2" sliver_id="urn:publicid:IDN+utah.cloudlab.us+sliver+2409437" mac_address="0c42a1dd5790">
+      <ip address="10.10.1.10" type="ipv4" netmask="255.255.255.0"/>
+    </interface>
+    <emulab:vnode name="amd165" hardware_type="c6525-25g"/>
+    <host name="node9.faa-c6525.hyflowtm-PG0.utah.cloudlab.us" ipv4="128.110.219.76"/>
+    <services>
+      <login authentication="ssh-keys" hostname="amd165.utah.cloudlab.us" port="22" username="balajia"/>
+      <login authentication="ssh-keys" hostname="amd165.utah.cloudlab.us" port="22" username="palmieri"/>
+      <login authentication="ssh-keys" hostname="amd165.utah.cloudlab.us" port="22" username="ltseng"/>
+      <login authentication="ssh-keys" hostname="amd165.utah.cloudlab.us" port="22" username="adb321"/>
+      <login authentication="ssh-keys" hostname="amd165.utah.cloudlab.us" port="22" username="ogrimes"/>
+      <login authentication="ssh-keys" hostname="amd165.utah.cloudlab.us" port="22" username="rdy221"/>
+      <login authentication="ssh-keys" hostname="amd165.utah.cloudlab.us" port="22" username="tsengle"/>
+      <login authentication="ssh-keys" hostname="amd165.utah.cloudlab.us" port="22" username="mfs409"/>
+      <login authentication="ssh-keys" hostname="amd165.utah.cloudlab.us" port="22" username="tuglu"/>
+      <login authentication="ssh-keys" hostname="amd165.utah.cloudlab.us" port="22" username="billyb"/>
+      <login authentication="ssh-keys" hostname="amd165.utah.cloudlab.us" port="22" username="kap325"/>
+      <login authentication="ssh-keys" hostname="amd165.utah.cloudlab.us" port="22" username="mlatva"/>
+      <login authentication="ssh-keys" hostname="amd165.utah.cloudlab.us" port="22" username="csiems"/>
+      <login authentication="ssh-keys" hostname="amd165.utah.cloudlab.us" port="22" username="darius"/>
+      <login authentication="ssh-keys" hostname="amd165.utah.cloudlab.us" port="22" username="alclev"/>
+      <login authentication="ssh-keys" hostname="amd165.utah.cloudlab.us" port="22" username="rishad"/>
+      <login authentication="ssh-keys" hostname="amd165.utah.cloudlab.us" port="22" username="Parthaw"/>
+      <login authentication="ssh-keys" hostname="amd165.utah.cloudlab.us" port="22" username="mpk225"/>
+      <login authentication="ssh-keys" hostname="amd165.utah.cloudlab.us" port="22" username="sheml"/>
+      <login authentication="ssh-keys" hostname="amd165.utah.cloudlab.us" port="22" username="ajbina"/>
+      <login authentication="ssh-keys" hostname="amd165.utah.cloudlab.us" port="22" username="Maxman"/>
+      <login authentication="ssh-keys" hostname="amd165.utah.cloudlab.us" port="22" username="WScott10"/>
+      <login authentication="ssh-keys" hostname="amd165.utah.cloudlab.us" port="22" username="vbalasu1"/>
+      <login authentication="ssh-keys" hostname="amd165.utah.cloudlab.us" port="22" username="stevie98"/>
+      <login authentication="ssh-keys" hostname="amd165.utah.cloudlab.us" port="22" username="haochen"/>
+      <login authentication="ssh-keys" hostname="amd165.utah.cloudlab.us" port="22" username="skb227"/>
+      <login authentication="ssh-keys" hostname="amd165.utah.cloudlab.us" port="22" username="Alexis"/>
+      <login authentication="ssh-keys" hostname="amd165.utah.cloudlab.us" port="22" username="tmt227"/>
+      <login authentication="ssh-keys" hostname="amd165.utah.cloudlab.us" port="22" username="jtw527"/>
+      <emulab:console server="boss.utah.cloudlab.us"/>
+      <emulab:recovery available="true"/>
+      <emulab:powercycle available="true"/>
+      <emulab:imageable available="true"/>
+    </services>
+  </node>
+  <link client_id="link-1" sliver_id="urn:publicid:IDN+utah.cloudlab.us+sliver+2409427" vlantag="348">
+    <interface_ref client_id="node0:eth1" component_id="urn:publicid:IDN+utah.cloudlab.us+interface+amd154:eth2" sliver_id="urn:publicid:IDN+utah.cloudlab.us+sliver+2409428"/>
+    <interface_ref client_id="node1:eth1" component_id="urn:publicid:IDN+utah.cloudlab.us+interface+amd148:eth2" sliver_id="urn:publicid:IDN+utah.cloudlab.us+sliver+2409429"/>
+    <interface_ref client_id="node2:eth1" component_id="urn:publicid:IDN+utah.cloudlab.us+interface+amd150:eth2" sliver_id="urn:publicid:IDN+utah.cloudlab.us+sliver+2409430"/>
+    <interface_ref client_id="node3:eth1" component_id="urn:publicid:IDN+utah.cloudlab.us+interface+amd140:eth2" sliver_id="urn:publicid:IDN+utah.cloudlab.us+sliver+2409431"/>
+    <interface_ref client_id="node4:eth1" component_id="urn:publicid:IDN+utah.cloudlab.us+interface+amd163:eth2" sliver_id="urn:publicid:IDN+utah.cloudlab.us+sliver+2409432"/>
+    <interface_ref client_id="node5:eth1" component_id="urn:publicid:IDN+utah.cloudlab.us+interface+amd132:eth2" sliver_id="urn:publicid:IDN+utah.cloudlab.us+sliver+2409433"/>
+    <interface_ref client_id="node6:eth1" component_id="urn:publicid:IDN+utah.cloudlab.us+interface+amd151:eth2" sliver_id="urn:publicid:IDN+utah.cloudlab.us+sliver+2409434"/>
+    <interface_ref client_id="node7:eth1" component_id="urn:publicid:IDN+utah.cloudlab.us+interface+amd155:eth2" sliver_id="urn:publicid:IDN+utah.cloudlab.us+sliver+2409435"/>
+    <interface_ref client_id="node8:eth1" component_id="urn:publicid:IDN+utah.cloudlab.us+interface+amd147:eth2" sliver_id="urn:publicid:IDN+utah.cloudlab.us+sliver+2409436"/>
+    <interface_ref client_id="node9:eth1" component_id="urn:publicid:IDN+utah.cloudlab.us+interface+amd165:eth2" sliver_id="urn:publicid:IDN+utah.cloudlab.us+sliver+2409437"/>
+    <link_type name="lan"/>
+    <component_manager name="urn:publicid:IDN+utah.cloudlab.us+authority+cm"/>
+  </link>
+  <rspec_tour xmlns="http://www.protogeni.net/resources/rspec/ext/apt-tour/1">
+    <description type="markdown">Variable number of nodes in a lan. You have the option of picking from one
+of several standard images we provide, or just use the default (typically a recent
+version of Ubuntu). You may also optionally pick the specific hardware type for
+all the nodes in the lan. </description>
+    <instructions type="markdown">Wait for the experiment to start, and then log into one or more of the nodes
+by clicking on them in the toplogy, and choosing the `shell` menu option.
+Use `sudo` to run root commands. 
+</instructions>
+  </rspec_tour>
+  <data_set xmlns="http://www.protogeni.net/resources/rspec/ext/profile-parameters/1">
+    <data_item name="emulab.net.parameter.linkSpeed">0</data_item>
+    <data_item name="emulab.net.parameter.tempFileSystemSize">0</data_item>
+    <data_item name="emulab.net.parameter.useVMs">False</data_item>
+    <data_item name="emulab.net.parameter.tempFileSystemMax">False</data_item>
+    <data_item name="emulab.net.parameter.tempFileSystemMount">/mydata</data_item>
+    <data_item name="emulab.net.parameter.exclusiveVMs">True</data_item>
+    <data_item name="emulab.net.parameter.bestEffort">False</data_item>
+    <data_item name="emulab.net.parameter.phystype">c6525-25g</data_item>
+    <data_item name="emulab.net.parameter.sameSwitch">False</data_item>
+    <data_item name="emulab.net.parameter.osImage">urn:publicid:IDN+emulab.net+image+emulab-ops//UBUNTU24-64-STD</data_item>
+    <data_item name="emulab.net.parameter.nodeCount">10</data_item>
+    <data_item name="emulab.net.parameter.startVNC">False</data_item>
+  </data_set>
+  <emulab:password name="experiment-rpctoken" encrypted="true">-----BEGIN PKCS7-----
+MIID+QYJKoZIhvcNAQcDoIID6jCCA+YCAQAxggHNMIIByQIBADCBsDCBqDELMAkG
+A1UEBhMCVVMxDTALBgNVBAgTBFV0YWgxFzAVBgNVBAcTDlNhbHQgTGFrZSBDaXR5
+MR0wGwYDVQQKExRVdGFoIE5ldHdvcmsgVGVzdGJlZDEPMA0GA1UECxMGQVBUTEFC
+MRcwFQYDVQQDEw53d3cuYXB0bGFiLm5ldDEoMCYGCSqGSIb3DQEJARYZdGVzdGJl
+ZC1vcHNAZmx1eC51dGFoLmVkdQIDJdKbMA0GCSqGSIb3DQEBAQUABIIBADfLeYGB
+5rgD8tTCKJ3GzOVVG3L/rTBKYrG1eVnBeMSTiaAxXfPOZUDJQvz2I1+Rwhc98sfc
+9FsyW/OgVtYgsRas/kJr0U8EYc0coR/aQKSEDHvbTi9V30BXpenNRp2rkchL/Yoe
+loeWMVdkUXxA+J4DWCJGm9qtiMUaQ9C6F5s5o8K8rCZOJkxsdQf+q71NUqMooh9j
+uYgQUx10c4uPkfG1jaIW1HrC5UHphBA4WIhD6sHmRjpqzwSvEZNseRYatNX3c87r
++XYWg95Yxuan4u3DefviSzNUZGByMWJlR2d0cfED1MYhLjS69oEUz6W5IZExqYnb
+PthNO/Q5IC2qGaowggIOBgkqhkiG9w0BBwEwHQYJYIZIAWUDBAEqBBCF9fyk9ym/
+DmGXYSPQKqsTgIIB4KhyS0AqLwIfo6QtM6pfgURnd1aqu9F9ZgrPS1D2s11CwKsg
+8cLCW+N+mUvr5Bogq0195qE4CWNvT5DXSvXoZVKoQ46h9xhwzY3ZCYRwiPvgTDYy
+OKPOKoZLXBs56OK8lC2o8/qwc19nwsPP2w3oex05ZRguv10T4QKykfQM90IMQtf0
+JeVwXcCIhxNSvjsEps9AnWF8e0pqle5XIvaDFad18KTknbSJawmRIQ6tZU+s8e7Z
+hTPn0tYhYWPWPsahP0B0d+BNr9zZ1XgFXzwcjFbz+Qh9UhfZ7i6P9tv7Ill3LwFx
+fPYaBbmW8HV/rsuN9L0hwKuMstTQ+u1iZSwrpq5qAfugYsPJyJPdm5W/IlND9ypg
++S45SwvRcGEc/T+IwT87ZgHFeSy1SL3esfPTWEDBlhdbaIuqn46F+a0oSMHM3c1/
+rxC+Lbaax5w/oGqum2UXdSu57tq3n52GOtlcxijruRbKb0OPyvAoYIC+pioDn9K7
+7bwJb2wjtZfnYrEH3YpgPYaoSLTxJyDm/qMTY2h4HqWursAdvgExCY81p+5c/Pls
+j30Agp4FOQyBiVutvCv1CSnlC7YPNWiM9Mnj65S9FRANyyLFYRf8cGiMF62d3Ebn
+1Eowfjv95UGPpMriKQ==
+-----END PKCS7-----
+</emulab:password>
+  <emulab:portal name="cloudlab" url="https://www.cloudlab.us/status.php?uuid=4ff3340d-1784-45c0-bb6d-bde36f5cd17c" project="HyflowTM" experiment="faa-c6525" sequence="1782227891"/>
+  <rs:site_info xmlns:rs="http://www.protogeni.net/resources/rspec/ext/site-info/1">
+    <rs:location country="US" latitude="40.750714" longitude="-111.893288"/>
+  </rs:site_info>
+</rspec>
