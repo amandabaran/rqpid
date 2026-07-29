@@ -5,7 +5,7 @@ base_dir="$HOME/rqpid/dLSM"
 ae_data_dir="$HOME/rqpid/AE/Data"
 
 workloads="ycsb-c insert-only update-only scan-only"
-threads="2"
+threads="72"
 distribution="zipfian uniform"
 
 # Cluster layout

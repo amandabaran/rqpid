@@ -5,7 +5,7 @@ base_dir="$HOME/rqpid/DMTree"
 ae_data_dir="$HOME/rqpid/AE/Data"
 
 workloads="ycsb-c insert-only update-only scan-only"
-threads="2"
+threads="72"
 distribution="zipfian uniform"
 
 # Cluster layout
@@ -21,12 +21,12 @@ mkdir -p "$ae_data_dir"
 
 echo "---------- Configuring hugepages ----------"
 for n in $memory_nodes; do
-    ssh w$n "sudo sysctl -w vm.nr_hugepages=51200"
+    ssh w$n "sudo sysctl -w vm.nr_hugepages=61440"
 done
 for n in $node; do
-    ssh w$n "sudo sysctl -w vm.nr_hugepages=20000"
+    ssh w$n "sudo sysctl -w vm.nr_hugepages=40000"
 done
-sudo sysctl -w vm.nr_hugepages=20000
+sudo sysctl -w vm.nr_hugepages=40000
 
 for dis in $distribution; do
     for thread in $threads; do

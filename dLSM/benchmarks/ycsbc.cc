@@ -664,7 +664,7 @@ int main(const int argc, const char *argv[])
     // TODO: 更新缓存会导致很多Key被allocate？,为什么会超这么多？
 
     // read key-value entries to fill up the cache
-	num_threads = 72;
+// removed hardcode
     actual_ops.clear();
 	start = node_id * number_of_key_per_compute;
     thread_op = perload_ops / rdma_mg->compute_nodes.size() / num_threads;

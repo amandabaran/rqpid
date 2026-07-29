@@ -17,9 +17,9 @@
 #define DCT_ACCESS_KEY 3185
 #define UD_PKEY 0x11111111
 #define PSN 3185
-#define NET_DEV_NAME "ens3f1" // [CONFIG]
-#define IB_DEV_NAME_IDX '6'       // [CONFIG]
-#define MLX_PORT 1                // [CONFIG]
+#define NET_DEV_NAME "enp202s0f0np0"    // [CONFIG]
+#define IB_DEV_NAME_IDX '2'             // [CONFIG]
+#define MLX_PORT 1                      // [CONFIG]
 #define ON_CHIP_SIZE 128
 
 constexpr int kWriteOroMax = 24;

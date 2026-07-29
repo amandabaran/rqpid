@@ -2,9 +2,9 @@
 #include <fstream>
 
 int kCoroCnt = 4;
-int kNodeCount = 7;
-int kComputeNodeCount = 6;
-int kMemoryNodeCount = 1;
+int kNodeCount = 4;          // 3 MS + 1 CS
+int kComputeNodeCount = 1;
+int kMemoryNodeCount = 3;
 
 DMVerbs* dmv;
 SkipVectorDM* client;
@@ -13,7 +13,7 @@ int main(int argc, char* argv[]) {
 	std::cout << "Running" << std::endl;
 
     DMConfig config;
-    config.dsmSize = 80;
+    config.dsmSize = 8;  // GB; SkipVector region is ~2.75 GB
     config.machineNR = kNodeCount;
 	config.ComputeNumber = kComputeNodeCount;
 	config.MemoryNumber = kMemoryNodeCount;

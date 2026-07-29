@@ -70,7 +70,7 @@ constexpr uint64_t kLocalLockNum = 4 * MB;
 // level of tree
 constexpr uint64_t kMaxLevelOfTree = 27;
 
-constexpr uint64_t rdmaBufferSize     = 8;         // GB  [CONFIG] 4
+constexpr uint64_t rdmaBufferSize     = 32;         // GB  [CONFIG] 4
 constexpr uint16_t kMaxCoro = 8;
 constexpr int64_t  kPerThreadRdmaBuf  = rdmaBufferSize * GB / MAX_THREAD_NUM;
 constexpr int64_t  kPerCoroRdmaBuf    = kPerThreadRdmaBuf / kMaxCoro;

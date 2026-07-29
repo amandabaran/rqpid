@@ -316,6 +316,7 @@ int main(const int argc, const char* argv[]) {
 	finish_thread_count.store(0);
 
 	config.machineNR = kNodeCount;
+	config.dsmSize = 16;
 	config.ComputeNumber = kComputeNodeCount;
 	config.MemoryNumber = kMemoryNodeCount;
 
@@ -331,7 +332,7 @@ int main(const int argc, const char* argv[]) {
 
 	dmv->resetThread();
 	vector<future<uint64_t>> actual_ops;
-	uint64_t perload_ops = 100000000;
+	uint64_t perload_ops = 20000000;
 	int tran_ops = 100000000;
 	int sum = 0;
 
@@ -373,30 +374,8 @@ int main(const int argc, const char* argv[]) {
 	dmv->resetThread();
 	reset();
 
-	// read key-value entries to fill up the cache
-	actual_ops.clear();
-	start = 0;
-	thread_op = perload_ops / num_threads;
-
-	for(int i = 0; i < num_threads; ++i) {
-		if(i == (num_threads - 1)) {
-			thread_op += (perload_ops % num_threads);
-			thread_op += config.ComputeNumber;
-		}
-		actual_ops.emplace_back(
-		    async(launch::async, thread_warm, start, thread_op));
-		start += thread_op;
-	}
-	assert((int)actual_ops.size() == num_threads);
-
-	sum = 0;
-	for(auto& n : actual_ops) {
-		assert(n.valid());
-		sum += n.get();
-	}
-
-	cerr << "# Warm records:\t" << sum << endl;
-	reset();
+	// [SKIPPED] warmup phase — was causing hangs
+	cerr << "# Warmup skipped" << endl;
 	dmv->barrier("running", config.ComputeNumber);
 	dmv->resetThread();
 

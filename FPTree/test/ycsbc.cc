@@ -347,7 +347,7 @@ int main(const int argc, const char* argv[]) {
 	dmv->barrier("init", config.ComputeNumber);
 
 	// per-load key-value entries
-	num_threads = 72;
+// removed hardcode
 	uint64_t start = (dmv->getMyNodeID() % config.ComputeNumber) *
 	                 (perload_ops / config.ComputeNumber);
 	uint64_t thread_op = perload_ops / config.ComputeNumber / num_threads;

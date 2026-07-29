@@ -5,7 +5,7 @@ base_dir="$HOME/rqpid/dLSM"
 ae_data_dir="$HOME/rqpid/AE/Data"
 
 workloads="ycsb-a ycsb-b ycsb-c ycsb-d ycsb-e ycsb-f"
-threads="2"
+threads="72"
 distribution="zipfian uniform"
 
 # Cluster layout

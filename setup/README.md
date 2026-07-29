@@ -2,15 +2,26 @@ Setup Steps for RQPID
 
 # 1. Run ./setup_local_hosts.sh manifest.xml
  
-# 2. Run ./setup_ssh_hosts.sh 
+# 2. Run ./setup_ssh_hosts.sh manifest.xml
 
 # 3. Run ./setup_env.sh
 
 # 4. Update memcached.conf files
     If memcached is not running on 10.10.1.1 at port 18888, update memcached.conf file within each system subdirectory. 
 
-# 5. Sync to all nodes
-    Run ./rqpid/sync.sh
+# 5. Edit include/RdmaVerbs.h within each desired repo (e.g., SkipVector) to reflect cluster.
+    On r650:
+    #define NET_DEV_NAME "enp202s0f0np0"    // [CONFIG]
+    #define IB_DEV_NAME_IDX '2'             // [CONFIG]
+    #define MLX_PORT 1                      // [CONFIG]
+
+
+# 6. Build and Sync to all nodes.
+    for n in w1 w2 w3 w4 w5 w6 w7; do
+        ssh w$n 'rm -f /tmp/build_ae.flag'
+        cd ~/rqpid && ./sync.sh
+        ssh w$n 'cd ~/rqpid && bash build_ae.sh 2>&1 | tail -5'
+    done
 
 
 # Common Issues

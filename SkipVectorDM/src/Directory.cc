@@ -1,4 +1,5 @@
 #include "Directory.h"
+#include "skipvector/Config.h"
 
 Gaddr g_root_ptr = Gaddr::Null();
 int g_root_level = -1;
@@ -19,6 +20,19 @@ Directory::Directory(DirectoryConnection* dCon, ConnectionInfo* remoteInfo,
 		dsm_start.nodeID = nodeID;
 		dsm_start.offset = per_directory_dsm_size * dirID;
 		chunckAlloc = new GlobalAllocator(dsm_start, per_directory_dsm_size);
+
+		// Reserve the SkipVector region at the head of the DSM (dir 0 only,
+		// since the region lives at offset 0 = dir 0's slice).
+		if (dirID == 0) {
+			const uint64_t chunk_sz = define::kChunkSize;
+			const uint64_t region   = sv::kSkipVectorRegionBytes;
+			const uint64_t n_chunks = (region + chunk_sz - 1) / chunk_sz;
+			for (uint64_t i = 0; i < n_chunks; ++i) {
+				(void)chunckAlloc->alloc_chunck();  // burn it
+			}
+			Debug::notifyInfo("Reserved %lu chunks (%lu MB) for SkipVector region\n",
+							n_chunks, (n_chunks * chunk_sz) / define::MB);
+		}
 	}
 
 	dirTh = new std::thread(&Directory::dirThread, this);
