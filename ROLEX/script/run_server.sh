@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Define the ROLEX directory as a variable
-dm_tree_dir="$HOME/rqpid/ROLEX"
+dm_tree_dir="$HOME/skipvecdm/ROLEX"
 
 # Navigate to the build directory under ROLEX
 cd $dm_tree_dir/build

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Define the SMART directory as a variable
-dm_tree_dir="$HOME/rqpid/SMART"
+dm_tree_dir="$HOME/skipvecdm/SMART"
 
 # Navigate to the build directory under SMART
 cd $dm_tree_dir/build

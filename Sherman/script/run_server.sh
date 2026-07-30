@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Define the Sherman directory as a variable
-dm_tree_dir="$HOME/rqpid/Sherman"
+dm_tree_dir="$HOME/skipvecdm/Sherman"
 
 # Navigate to the build directory under Sherman
 cd $dm_tree_dir/build

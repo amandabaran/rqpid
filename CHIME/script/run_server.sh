@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Define the CHIME directory as a variable
-dm_tree_dir="$HOME/rqpid/CHIME"
+dm_tree_dir="$HOME/skipvecdm/CHIME"
 
 # Navigate to the build directory under CHIME
 cd $dm_tree_dir/build

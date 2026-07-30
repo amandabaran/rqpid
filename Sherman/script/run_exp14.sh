@@ -1,8 +1,8 @@
 #!/bin/bash
 trap 'kill $(jobs -p)' SIGINT
 
-base_dir="$HOME/rqpid/Sherman"
-ae_data_dir="$HOME/rqpid/AE/Data"
+base_dir="$HOME/skipvecdm/Sherman"
+ae_data_dir="$HOME/skipvecdm/AE/Data"
 
 workloads="ycsb-a ycsb-b ycsb-c ycsb-d ycsb-e ycsb-f"
 threads="72"

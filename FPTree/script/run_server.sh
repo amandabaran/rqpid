@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Define the FPTree directory as a variable
-dm_tree_dir="$HOME/rqpid/FPTree"
+dm_tree_dir="$HOME/skipvecdm/FPTree"
 
 # Navigate to the build directory under FPTree
 cd $dm_tree_dir/build

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Define the SkipVectorDM directory as a variable
-dm_tree_dir="$HOME/rqpid/SkipVectorDM"
+dm_tree_dir="$HOME/skipvecdm/SkipVectorDM"
 
 # Navigate to the build directory under SkipVectorDM
 cd $dm_tree_dir/build

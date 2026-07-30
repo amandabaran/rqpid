@@ -12,7 +12,7 @@ build_node() {
     local node=$1
     local tgts=$2
     echo "[$node] building: $tgts"
-    if ssh $node "cd ~/rqpid/SkipVectorDM && mkdir -p build && cd build && \
+    if ssh $node "cd ~/skipvecdm/SkipVectorDM && mkdir -p build && cd build && \
                   cmake .. >/tmp/cmake_$node.log 2>&1 && \
                   make -j $tgts >/tmp/build_$node.log 2>&1"; then
         echo "[$node] BUILD OK"

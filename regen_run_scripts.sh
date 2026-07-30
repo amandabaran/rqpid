@@ -1,6 +1,6 @@
 #!/bin/bash
 # Regenerate run_exp0.sh and run_exp14.sh for every baseline.
-# Run from ~/rqpid/
+# Run from ~/skipvecdm/
 
 set -e
 
@@ -67,8 +67,8 @@ gen_script() {
 #!/bin/bash
 trap 'kill \$(jobs -p)' SIGINT
 
-base_dir="\$HOME/rqpid/$baseline"
-ae_data_dir="\$HOME/rqpid/AE/Data"
+base_dir="\$HOME/skipvecdm/$baseline"
+ae_data_dir="\$HOME/skipvecdm/AE/Data"
 
 workloads="$workloads"
 threads="72"

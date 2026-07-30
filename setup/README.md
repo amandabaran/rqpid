@@ -1,4 +1,4 @@
-Setup Steps for RQPID
+Setup Steps for skipvecdm
 
 # 1. Run ./setup_local_hosts.sh manifest.xml
  
@@ -19,8 +19,8 @@ Setup Steps for RQPID
 # 6. Build and Sync to all nodes.
     for n in w1 w2 w3 w4 w5 w6 w7; do
         ssh w$n 'rm -f /tmp/build_ae.flag'
-        cd ~/rqpid && ./sync.sh
-        ssh w$n 'cd ~/rqpid && bash build_ae.sh 2>&1 | tail -5'
+        cd ~/skipvecdm && ./sync.sh
+        ssh w$n 'cd ~/skipvecdm && bash build_ae.sh 2>&1 | tail -5'
     done
 
 
@@ -31,7 +31,7 @@ Setup Steps for RQPID
 
 # Typical Run Steps:
 ## Sync the updated scripts
-cd ~/rqpid && ./sync.sh
+cd ~/skipvecdm && ./sync.sh
 
 ## Clean any leftover state
 # Nuke ALL ycsbc / server / memcached / numactl everywhere
@@ -46,7 +46,7 @@ ssh w1 'cat /proc/meminfo | grep HugePages_Free'  # confirm 51200
 
 ## Launch DMTree
 ssh w7 'rm -f /tmp/simple_exp.flag'
-ssh w7 'cd ~/rqpid/DMTree/script && bash run_exp0.sh 2>&1 | tee /tmp/dmtree_smoke.log'
+ssh w7 'cd ~/skipvecdm/DMTree/script && bash run_exp0.sh 2>&1 | tee /tmp/dmtree_smoke.log'
 
 
 # Monitor a Run
@@ -62,5 +62,5 @@ echo ""
 echo "=== Output file sizes ==="
 for n in w2 w3 w4 w5 w6 w7; do
     echo -n "$n: "
-    ssh $n "ls -la ~/rqpid/DMTree/data/ 2>/dev/null | grep dmtree | tail -1 | awk \"{print \\\$5,\\\$9}\""
+    ssh $n "ls -la ~/skipvecdm/DMTree/data/ 2>/dev/null | grep dmtree | tail -1 | awk \"{print \\\$5,\\\$9}\""
 done'

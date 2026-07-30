@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Define the DMTree directory as a variable
-dm_tree_dir="$HOME/rqpid/DMTree"
+dm_tree_dir="$HOME/skipvecdm/DMTree"
 
 # Navigate to the build directory under DMTree
 cd $dm_tree_dir/build
