@@ -19,6 +19,7 @@
 #include <cstdio>
 #include <cstring>
 #include <cstdint>
+#include <unistd.h>
 
 static constexpr int kNodeCount        = 4;   // 3 MS + 1 CS
 static constexpr int kMemoryNodeCount  = 3;
