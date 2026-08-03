@@ -13,7 +13,7 @@ int main(int argc, char* argv[]) {
 	std::cout << "Running" << std::endl;
 
     DMConfig config;
-    config.dsmSize = 8;  // GB; SkipVector region is ~2.75 GB
+    config.dsmSize      = 2;  // GB; SkipVector region is ~2.75 GB
     config.machineNR = kNodeCount;
 	config.ComputeNumber = kComputeNodeCount;
 	config.MemoryNumber = kMemoryNodeCount;

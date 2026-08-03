@@ -17,9 +17,9 @@
 #define DCT_ACCESS_KEY 3185
 #define UD_PKEY 0x11111111
 #define PSN 3185
-#define NET_DEV_NAME "ens3f1" // [CONFIG]
-#define IB_DEV_NAME_IDX '2'       // [CONFIG]
-#define MLX_PORT 1                // [CONFIG]
+#define NET_DEV_NAME "enp8s0d1"
+#define IB_DEV_NAME_IDX '0'
+#define MLX_PORT 1
 #define ON_CHIP_SIZE 128
 
 constexpr int kWriteOroMax = 24;
@@ -65,7 +65,7 @@ struct Region {
 };
 
 //// Resource.cpp
-bool createContext(RdmaContext *context, uint8_t port = MLX_PORT, int gidIndex = 1,
+bool createContext(RdmaContext *context, uint8_t port = MLX_PORT, int gidIndex = 0,
                    uint8_t devIndex = 0);
 bool destoryContext(RdmaContext *context);
 

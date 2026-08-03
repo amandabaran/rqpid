@@ -89,8 +89,19 @@ rm -f /tmp/cluster_key /tmp/cluster_key.pub
 
 echo
 echo "=== Step 5: Configure hugepages ==="
+source "$(dirname "$0")/../cluster.conf"
 for n in "${NODES[@]}"; do
-    ssh "$n" 'echo "vm.nr_hugepages = 51200" | sudo tee /etc/sysctl.d/99-hugepages.conf >/dev/null && sudo sysctl -w vm.nr_hugepages=51200'
+    ssh "$n" "echo 'vm.nr_hugepages = $HUGEPAGES' | sudo tee /etc/sysctl.d/99-hugepages.conf >/dev/null && \
+              sudo sysctl -w vm.nr_hugepages=$HUGEPAGES >/dev/null"
+done
+
+echo "=== Step 6: Raise memlock limits ==="
+for n in "${NODES[@]}"; do
+    ssh "$n" 'sudo bash -c "cat > /etc/security/limits.d/99-rdma.conf" <<EOF
+* soft memlock unlimited
+* hard memlock unlimited
+EOF'
+    echo "  $n: memlock raised"
 done
 
 echo

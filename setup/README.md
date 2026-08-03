@@ -1,134 +1,181 @@
-## Cluster Setup Steps for skipvecdm
+# SkipVectorDM
 
-Fromt the setup/ directory, run the following commands:
+## Quick Reference
 
-1. Run `./setup_local_hosts.sh manifest.xml`
- 
-2. Run `./setup_ssh_hosts.sh manifest.xml`
+All cluster-specific tunables live in [`cluster.conf`](cluster.conf). When
+switching clusters, edit that file and rerun the two "apply" scripts below.
 
-3. Run `./setup_env.sh`
+## Cluster Setup
 
-## Cluster RDMA Config
+From the `setup/` directory, run the following on your driver machine:
 
-`include/RdmaVerbs.h` hardcodes four values that must match the target cluster:
+1. `./setup_local_hosts.sh manifest.xml`
+2. `./setup_ssh_hosts.sh manifest.xml`
+3. `./setup_env.sh`
 
-```cpp
-#define NET_DEV_NAME    "enp8s0d1"    // Ethernet iface on the private subnet
-#define IB_DEV_NAME_IDX '0'           // char at index 5 of the RDMA device name
-#define MLX_PORT        1             // 1-indexed port on that device
-// and, in the same file, the createContext() declaration:
-bool createContext(..., int gidIndex = 0, ...);
-```
+## Adapting to a New Cluster
 
-To find the right values, run on any cluster node:
+All cluster-specific values live in `cluster.conf`:
+
+- RDMA transport (`NET_DEV_NAME`, `IB_DEV_NAME_IDX`, `MLX_PORT`, `GID_INDEX`)
+- Memory sizing (`RDMA_BUFFER_GB`, `DSM_GB`, `LEAF_POOL_MB`, `HUGEPAGES`)
+- Memcached endpoint (`MEMCACHED_HOST`, `MEMCACHED_PORT`)
+
+To switch to a new cluster:
+
+1. Edit `cluster.conf`. Use the reference table at the bottom of that file, or
+   the discovery recipe in [Finding RDMA Config](#finding-rdma-config) below.
+2. Patch the source tree:
+   ```bash
+   ./setup/apply_cluster_conf.sh
+   ```
+3. Push to all nodes and apply runtime state (hugepages):
+   ```bash
+   ./sync.sh
+   ./setup/apply_cluster_runtime.sh
+   ```
+4. Rebuild:
+   ```bash
+   ./build_all.sh
+   ```
+
+`cluster.conf` is under version control; each commit captures the exact
+tunables in effect. No drift between "what I changed" and "what runs."
+
+## Finding RDMA Config
+
+Run on any active cluster node:
 
 ```bash
-ibv_devinfo                                    # pick the ACTIVE port
-ip -o -4 addr show | grep 10.10.1.             # find its Ethernet iface
+ibv_devinfo                            # pick the ACTIVE port
+ip -o -4 addr show | grep 10.10.1.     # find its Ethernet iface
 ```
 
-Pick the `ibv_devinfo` port with `state: PORT_ACTIVE (4)`:
-- `hca_id: mlx4_0` → `IB_DEV_NAME_IDX = '0'`
+From `ibv_devinfo`, pick the port with `state: PORT_ACTIVE (4)`:
+- `hca_id: mlx4_0` → `IB_DEV_NAME_IDX = "0"` (char at index 5)
 - `port: 1` → `MLX_PORT = 1`
-- `link_layer: InfiniBand` → `gidIndex = 0`
-If `link_layer: Ethernet` (RoCE) → find the `type=RoCE v2` GID with an IPv4-mapped
-  suffix (`::ffff:0a0a:XXXX`):
+- `link_layer: InfiniBand` → `GID_INDEX = 0`
+- `link_layer: Ethernet` (RoCE) → find the `type=RoCE v2` GID with an
+  IPv4-mapped suffix `::ffff:XXXX:YYYY`:
   ```bash
-  DEV=mlx5_2; PORT=1
+  DEV=mlx5_2 PORT=1
   for i in $(seq 0 7); do
-    echo "gid[$$i] $$(cat /sys/class/infiniband/$$DEV/ports/$$PORT/gid_attrs/types/$$i 2>/dev/null) $$(cat /sys/class/infiniband/$$DEV/ports/$$PORT/gids/$i 2>/dev/null)"
+    echo "gid[$$i] type=$$(cat /sys/class/infiniband/$$DEV/ports/$$PORT/gid_attrs/types/$$i 2>/dev/null) gid=$$(cat /sys/class/infiniband/$$DEV/ports/$$PORT/gids/$i 2>/dev/null)"
   done
   ```
 
-`NET_DEV_NAME` is the Ethernet interface (not the RDMA device) that has the
-node's private-subnet IP; the code uses it to advertise itself to memcached.
+`NET_DEV_NAME` is the Ethernet iface (not the RDMA device) that has the node's
+private-subnet IP; the code uses it to advertise itself to memcached.
 
-To apply the same config to all baselines at once:
-```bash
-./set_rdma_config.sh <NET_DEV_NAME> <IB_DEV_NAME_IDX> <MLX_PORT> <gidIndex>
-```
+**Prerequisites** (if `ibv_devinfo` prints nothing):
+- Load kernel modules: `sudo modprobe mlx5_ib` (or `mlx4_ib` for ConnectX-3) `ib_uverbs rdma_ucm`
+- InfiniBand only: subnet manager must be running somewhere: `sudo apt install opensm && sudo systemctl start opensm`
 
-**Verify:**
+## Verifying the Config
 
-After updating `include/RdmaVerbs.h`, verify RDMA is working correctly:
+After `apply_cluster_conf.sh`:
 
 ```bash
 ./sync.sh
 ./build_all.sh test_rdma_context
-for n in w1 w2 w3 w4; do ssh $n '~/rqpid/SkipVectorDM/build/test_rdma_context'; done
+for n in w1 w2 w3 w4; do ssh $n '~/skipvecdm/SkipVectorDM/build/test_rdma_context'; done
 ```
-Each node should print nonzero `lkey`/`rkey` and a nonzero GID.
 
-After confirming RDMA contexts are correct, run the RDMA smoke test. 
+Each node should print nonzero `lkey`/`rkey` and a nonzero GID matching what
+`ibv_devinfo` reported.
+
+Then the multi-node smoke test:
 ```bash
 ./build_all.sh test_rdma_smoke
 ./run_smoke.sh
 ```
 
-**Prerequisites** (if `ibv_devinfo` is empty):
-- `sudo modprobe mlx5_ib` (or `mlx4_ib`) `ib_uverbs rdma_ucm`
-- InfiniBand only: `sudo apt install opensm && sudo systemctl start opensm`
+Expected: writes/reads/CAS across 3 memory servers, all verified, sub-10 μs
+read latency.
 
-**Reference configs seen so far:**
+## Reference Configurations
 
-| Hardware              | ETH iface   | Link            | DEV_IDX | PORT | GID | COMMAND                                    |
-|-----------------------|-------------|-----------------|---------|------|-----|--------------------------------------------|
-| r650 (ConnectX-6)     | `ens1f1np1` | Ethernet/RoCEv2 | `'2'`   | 1    | 3   | ./setup/set_rdma_config.sh ens1f1np1 2 1 3 |
-| r320 (ConnectX-3)     | `enp8s0d1`  | InfiniBand      | `'0'`   | 1    | 0   | ./setup/set_rdma_config.sh enp8s0d1 0 1 0  |
+| Hardware              | ETH iface   | Link            | DEV_IDX | PORT | GID | RDMA_BUF GB | DSM GB | HUGEPAGES |
+|-----------------------|-------------|-----------------|---------|------|-----|-------------|--------|-----------|
+| r650 (ConnectX-6)     | `ens1f1np1` | Ethernet/RoCEv2 | `"2"`   | 1    | 3   | 32          | 8      | 51200     |
+| r320 (ConnectX-3)     | `enp8s0d1`  | InfiniBand      | `"0"`   | 1    | 0   | 2           | 2      | 3000      |
 
-**Note on Memcached:**
-If memcached is not running on 10.10.1.1 at port 18888, update memcached.conf file within each system subdirectory. 
+## Memcached
 
-
+If memcached needs to run on a different host/port, set `MEMCACHED_HOST` and
+`MEMCACHED_PORT` in `cluster.conf` and rerun `apply_cluster_conf.sh` — the
+script rewrites `memcached.conf` in each system subdirectory.
 
 ## Build and Sync
 
-To sync local repo to cluster and build, run:
+Sync source and build across all cluster nodes in parallel:
 ```bash
-    for n in w1 w2 w3 w4 w5 w6 w7; do
-        ssh w$n 'rm -f /tmp/build_ae.flag'
-        cd ~/skipvecdm && ./sync.sh
-        ssh w$n 'cd ~/skipvecdm && bash build_ae.sh 2>&1 | tail -5'
-    done
+cd ~/skipvecdm
+./sync.sh
+./build_all.sh [target]        # default: everything under SkipVectorDM
+```
+
+To build every baseline (DMTree, FPTree, Sherman, etc.):
+```bash
+for n in w1 w2 w3 w4 w5 w6 w7; do
+    ssh $n 'rm -f /tmp/build_ae.flag'
+    ssh $n 'cd ~/skipvecdm && bash build_ae.sh 2>&1 | tail -5'
+done
 ```
 
 ## Common Issues
 
-# Fragmented memory (mmap seg fault in DMVerbs)
-    FIX: Reboot all nodes in experiment!
-
-# Typical Run Steps:
-1. Sync the updated scripts
-`cd ~/skipvecdm && ./sync.sh`
-
-2. Clean any leftover state
-Nuke ALL ycsbc / server / memcached / numactl everywhere:
+### `mmap` segfault in `DMVerbs::DMVerbs`
+Hugepages aren't allocated on that node. Reapply:
 ```bash
-for n in w1 w2 w3 w4 w5 w6 w7; do
-    ssh $n 'pkill -9 -f ycsbc; pkill -9 -f "./server"; pkill -9 -f numactl; pkill -9 memcached; sleep 1'
-done
+./setup/apply_cluster_runtime.sh
+```
+If that still fails after allocation, memory is fragmented. Reboot the node.
+
+### `NOT FOUND` in `serverEnter()` retry loop
+Memcached wasn't seeded with `serverNum=0`. Either the `restart_memc.sh` step
+failed, or a previous run left stale state. Rerun:
+```bash
+ssh w1 'bash ~/skipvecdm/SkipVectorDM/script/restart_memc.sh'
 ```
 
-3. Reset hugepages cleanly on memory node
-`ssh w1 'sudo sysctl -w vm.nr_hugepages=0 && sleep 1 && sudo sysctl -w vm.nr_hugepages=51200'`
-`ssh w1 'cat /proc/meminfo | grep HugePages_Free'  # confirm 51200`
-
-4. Launch DMTree
-`ssh w7 'rm -f /tmp/simple_exp.flag'`
-`ssh w7 'cd ~/skipvecdm/DMTree/script && bash run_exp0.sh 2>&1 | tee /tmp/dmtree_smoke.log'`
-
-5. Monitor a Run
-
-In a second shell run:  
-```bash                   
-    for n in w1 w2 w3 w4 w5 w6 w7; do
-        echo -n "$n: "
-        ssh $n "pgrep -af ycsbc 2>/dev/null | head -1 || pgrep -af \"\\./server\" 2>/dev/null | head -1 || echo idle"
-    done
-    echo ""
-    echo "=== Output file sizes ==="
-    for n in w2 w3 w4 w5 w6 w7; do
-        echo -n "$n: "
-        ssh $n "ls -la ~/skipvecdm/DMTree/data/ 2>/dev/null | grep dmtree | tail -1 | awk \"{print \\\$5,\\\$9}\""
-    done
+### Silent hang at cluster startup
+Compute node is racing memory nodes. Confirm all N nodes registered:
+```bash
+ssh w1 'printf "get serverNum\r\nquit\r\n" | nc -w2 10.10.1.1 18888'
 ```
+Should equal `machineNR` from the test's `DMConfig`.
+
+## Typical Run Steps
+
+1. Sync updated scripts:
+   ```bash
+   cd ~/skipvecdm && ./sync.sh
+   ```
+
+2. Clean leftover state:
+   ```bash
+   for n in w1 w2 w3 w4 w5 w6 w7; do
+       ssh $n 'pkill -9 -f ycsbc; pkill -9 -f "./server"; pkill -9 -f numactl; pkill -9 memcached; sleep 1'
+   done
+   ```
+
+3. Reset hugepages on memory node:
+   ```bash
+   ssh w1 'sudo sysctl -w vm.nr_hugepages=0 && sleep 1 && sudo sysctl -w vm.nr_hugepages=51200'
+   ssh w1 'grep HugePages_Free /proc/meminfo'
+   ```
+
+4. Launch a baseline (example: DMTree):
+   ```bash
+   ssh w7 'rm -f /tmp/simple_exp.flag'
+   ssh w7 'cd ~/skipvecdm/DMTree/script && bash run_exp0.sh 2>&1 | tee /tmp/dmtree_smoke.log'
+   ```
+
+5. Monitor:
+   ```bash
+   for n in w1 w2 w3 w4 w5 w6 w7; do
+       echo -n "$n: "
+       ssh $n "pgrep -af ycsbc 2>/dev/null | head -1 || pgrep -af '\\./server' 2>/dev/null | head -1 || echo idle"
+   done
+   ```

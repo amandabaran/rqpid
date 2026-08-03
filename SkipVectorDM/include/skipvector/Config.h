@@ -28,7 +28,7 @@ constexpr size_t   kIndexNodeSize    = 1152;
 // ---------- Slab pool sizes per memory server ----------
 // Reserve a fixed region on each MS at boot. Identical layout on all replicas.
 constexpr uint64_t kSlabHandleBytes   = 256ull * define::MB;
-constexpr uint64_t kSlabLeafBytes     =   2ull * define::GB;
+constexpr uint64_t kSlabLeafBytes   = 512ull * define::MB;
 constexpr uint64_t kSlabIndexBytes    = 512ull * define::MB;
 constexpr uint64_t kSkipVectorRegionBytes =
     kSlabHandleBytes + kSlabLeafBytes + kSlabIndexBytes;

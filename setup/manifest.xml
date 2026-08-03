@@ -1,439 +1,383 @@
 <rspec xmlns="http://www.geni.net/resources/rspec/3" xmlns:emulab="http://www.protogeni.net/resources/rspec/ext/emulab/1" xmlns:tour="http://www.protogeni.net/resources/rspec/ext/apt-tour/1" xmlns:jacks="http://www.protogeni.net/resources/rspec/ext/jacks/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.geni.net/resources/rspec/3    http://www.geni.net/resources/rspec/3/request.xsd" type="request">
-  <node xmlns:emulab="http://www.protogeni.net/resources/rspec/ext/emulab/1" client_id="node0" exclusive="true" component_manager_id="urn:publicid:IDN+clemson.cloudlab.us+authority+cm" component_id="urn:publicid:IDN+clemson.cloudlab.us+node+clnode267" sliver_id="urn:publicid:IDN+clemson.cloudlab.us+sliver+812988">
+  <node xmlns:emulab="http://www.protogeni.net/resources/rspec/ext/emulab/1" client_id="node0" exclusive="true" component_manager_id="urn:publicid:IDN+apt.emulab.net+authority+cm" component_id="urn:publicid:IDN+apt.emulab.net+node+apt176" sliver_id="urn:publicid:IDN+apt.emulab.net+sliver+495144">
     <sliver_type name="raw-pc">
       <disk_image name="urn:publicid:IDN+emulab.net+image+emulab-ops//UBUNTU24-64-STD"/>
     </sliver_type>
-    <hardware_type name="r650"/>
-    <interface client_id="node0:eth1" component_id="urn:publicid:IDN+clemson.cloudlab.us+interface+clnode267:eth4" sliver_id="urn:publicid:IDN+clemson.cloudlab.us+sliver+812998" mac_address="043f72fed8f8">
+    <hardware_type name="r320"/>
+    <interface client_id="node0:eth1" component_id="urn:publicid:IDN+apt.emulab.net+interface+apt176:eth2" sliver_id="urn:publicid:IDN+apt.emulab.net+sliver+495150" mac_address="f45214157192">
       <ip address="10.10.1.1" type="ipv4" netmask="255.255.255.0"/>
     </interface>
-    <emulab:vnode name="clnode267" hardware_type="r650"/>
-    <host name="node0.dmtree-r650.hyflowtm-PG0.clemson.cloudlab.us" ipv4="130.127.134.52"/>
+    <emulab:vnode name="apt176" hardware_type="r320"/>
+    <host name="node0.adb321-312132.hyflowtm-PG0.apt.emulab.net" ipv4="128.110.96.176"/>
     <services>
-      <login authentication="ssh-keys" hostname="clnode267.clemson.cloudlab.us" port="22" username="balajia"/>
-      <login authentication="ssh-keys" hostname="clnode267.clemson.cloudlab.us" port="22" username="palmieri"/>
-      <login authentication="ssh-keys" hostname="clnode267.clemson.cloudlab.us" port="22" username="ltseng"/>
-      <login authentication="ssh-keys" hostname="clnode267.clemson.cloudlab.us" port="22" username="adb321"/>
-      <login authentication="ssh-keys" hostname="clnode267.clemson.cloudlab.us" port="22" username="ogrimes"/>
-      <login authentication="ssh-keys" hostname="clnode267.clemson.cloudlab.us" port="22" username="rdy221"/>
-      <login authentication="ssh-keys" hostname="clnode267.clemson.cloudlab.us" port="22" username="tsengle"/>
-      <login authentication="ssh-keys" hostname="clnode267.clemson.cloudlab.us" port="22" username="mfs409"/>
-      <login authentication="ssh-keys" hostname="clnode267.clemson.cloudlab.us" port="22" username="tuglu"/>
-      <login authentication="ssh-keys" hostname="clnode267.clemson.cloudlab.us" port="22" username="billyb"/>
-      <login authentication="ssh-keys" hostname="clnode267.clemson.cloudlab.us" port="22" username="kap325"/>
-      <login authentication="ssh-keys" hostname="clnode267.clemson.cloudlab.us" port="22" username="mlatva"/>
-      <login authentication="ssh-keys" hostname="clnode267.clemson.cloudlab.us" port="22" username="csiems"/>
-      <login authentication="ssh-keys" hostname="clnode267.clemson.cloudlab.us" port="22" username="darius"/>
-      <login authentication="ssh-keys" hostname="clnode267.clemson.cloudlab.us" port="22" username="alclev"/>
-      <login authentication="ssh-keys" hostname="clnode267.clemson.cloudlab.us" port="22" username="rishad"/>
-      <login authentication="ssh-keys" hostname="clnode267.clemson.cloudlab.us" port="22" username="Parthaw"/>
-      <login authentication="ssh-keys" hostname="clnode267.clemson.cloudlab.us" port="22" username="mpk225"/>
-      <login authentication="ssh-keys" hostname="clnode267.clemson.cloudlab.us" port="22" username="sheml"/>
-      <login authentication="ssh-keys" hostname="clnode267.clemson.cloudlab.us" port="22" username="ajbina"/>
-      <login authentication="ssh-keys" hostname="clnode267.clemson.cloudlab.us" port="22" username="Maxman"/>
-      <login authentication="ssh-keys" hostname="clnode267.clemson.cloudlab.us" port="22" username="WScott10"/>
-      <login authentication="ssh-keys" hostname="clnode267.clemson.cloudlab.us" port="22" username="vbalasu1"/>
-      <login authentication="ssh-keys" hostname="clnode267.clemson.cloudlab.us" port="22" username="stevie98"/>
-      <login authentication="ssh-keys" hostname="clnode267.clemson.cloudlab.us" port="22" username="haochen"/>
-      <login authentication="ssh-keys" hostname="clnode267.clemson.cloudlab.us" port="22" username="skb227"/>
-      <login authentication="ssh-keys" hostname="clnode267.clemson.cloudlab.us" port="22" username="Alexis"/>
-      <login authentication="ssh-keys" hostname="clnode267.clemson.cloudlab.us" port="22" username="tmt227"/>
-      <login authentication="ssh-keys" hostname="clnode267.clemson.cloudlab.us" port="22" username="jtw527"/>
-      <emulab:console server="boss.clemson.cloudlab.us"/>
+      <login authentication="ssh-keys" hostname="apt176.apt.emulab.net" port="22" username="balajia"/>
+      <login authentication="ssh-keys" hostname="apt176.apt.emulab.net" port="22" username="palmieri"/>
+      <login authentication="ssh-keys" hostname="apt176.apt.emulab.net" port="22" username="ltseng"/>
+      <login authentication="ssh-keys" hostname="apt176.apt.emulab.net" port="22" username="adb321"/>
+      <login authentication="ssh-keys" hostname="apt176.apt.emulab.net" port="22" username="ogrimes"/>
+      <login authentication="ssh-keys" hostname="apt176.apt.emulab.net" port="22" username="rdy221"/>
+      <login authentication="ssh-keys" hostname="apt176.apt.emulab.net" port="22" username="tsengle"/>
+      <login authentication="ssh-keys" hostname="apt176.apt.emulab.net" port="22" username="mfs409"/>
+      <login authentication="ssh-keys" hostname="apt176.apt.emulab.net" port="22" username="tuglu"/>
+      <login authentication="ssh-keys" hostname="apt176.apt.emulab.net" port="22" username="billyb"/>
+      <login authentication="ssh-keys" hostname="apt176.apt.emulab.net" port="22" username="kap325"/>
+      <login authentication="ssh-keys" hostname="apt176.apt.emulab.net" port="22" username="mlatva"/>
+      <login authentication="ssh-keys" hostname="apt176.apt.emulab.net" port="22" username="csiems"/>
+      <login authentication="ssh-keys" hostname="apt176.apt.emulab.net" port="22" username="darius"/>
+      <login authentication="ssh-keys" hostname="apt176.apt.emulab.net" port="22" username="alclev"/>
+      <login authentication="ssh-keys" hostname="apt176.apt.emulab.net" port="22" username="rishad"/>
+      <login authentication="ssh-keys" hostname="apt176.apt.emulab.net" port="22" username="Parthaw"/>
+      <login authentication="ssh-keys" hostname="apt176.apt.emulab.net" port="22" username="mpk225"/>
+      <login authentication="ssh-keys" hostname="apt176.apt.emulab.net" port="22" username="sheml"/>
+      <login authentication="ssh-keys" hostname="apt176.apt.emulab.net" port="22" username="ajbina"/>
+      <login authentication="ssh-keys" hostname="apt176.apt.emulab.net" port="22" username="Maxman"/>
+      <login authentication="ssh-keys" hostname="apt176.apt.emulab.net" port="22" username="WScott10"/>
+      <login authentication="ssh-keys" hostname="apt176.apt.emulab.net" port="22" username="vbalasu1"/>
+      <login authentication="ssh-keys" hostname="apt176.apt.emulab.net" port="22" username="stevie98"/>
+      <login authentication="ssh-keys" hostname="apt176.apt.emulab.net" port="22" username="skb227"/>
+      <login authentication="ssh-keys" hostname="apt176.apt.emulab.net" port="22" username="Alexis"/>
+      <login authentication="ssh-keys" hostname="apt176.apt.emulab.net" port="22" username="haochen"/>
+      <login authentication="ssh-keys" hostname="apt176.apt.emulab.net" port="22" username="tmt227"/>
+      <login authentication="ssh-keys" hostname="apt176.apt.emulab.net" port="22" username="jtw527"/>
+      <emulab:console server="boss.apt.emulab.net"/>
       <emulab:recovery available="true"/>
       <emulab:powercycle available="true"/>
       <emulab:imageable available="true"/>
     </services>
   </node>
-  <node xmlns:emulab="http://www.protogeni.net/resources/rspec/ext/emulab/1" client_id="node1" exclusive="true" component_manager_id="urn:publicid:IDN+clemson.cloudlab.us+authority+cm" component_id="urn:publicid:IDN+clemson.cloudlab.us+node+clnode268" sliver_id="urn:publicid:IDN+clemson.cloudlab.us+sliver+812991">
+  <node xmlns:emulab="http://www.protogeni.net/resources/rspec/ext/emulab/1" client_id="node1" exclusive="true" component_manager_id="urn:publicid:IDN+apt.emulab.net+authority+cm" component_id="urn:publicid:IDN+apt.emulab.net+node+apt181" sliver_id="urn:publicid:IDN+apt.emulab.net+sliver+495146">
     <sliver_type name="raw-pc">
       <disk_image name="urn:publicid:IDN+emulab.net+image+emulab-ops//UBUNTU24-64-STD"/>
     </sliver_type>
-    <hardware_type name="r650"/>
-    <interface client_id="node1:eth1" component_id="urn:publicid:IDN+clemson.cloudlab.us+interface+clnode268:eth4" sliver_id="urn:publicid:IDN+clemson.cloudlab.us+sliver+812999" mac_address="043f72fecf40">
+    <hardware_type name="r320"/>
+    <interface client_id="node1:eth1" component_id="urn:publicid:IDN+apt.emulab.net+interface+apt181:eth2" sliver_id="urn:publicid:IDN+apt.emulab.net+sliver+495151" mac_address="f45214154562">
       <ip address="10.10.1.2" type="ipv4" netmask="255.255.255.0"/>
     </interface>
-    <emulab:vnode name="clnode268" hardware_type="r650"/>
-    <host name="node1.dmtree-r650.hyflowtm-PG0.clemson.cloudlab.us" ipv4="130.127.134.53"/>
+    <emulab:vnode name="apt181" hardware_type="r320"/>
+    <host name="node1.adb321-312132.hyflowtm-PG0.apt.emulab.net" ipv4="128.110.96.181"/>
     <services>
-      <login authentication="ssh-keys" hostname="clnode268.clemson.cloudlab.us" port="22" username="balajia"/>
-      <login authentication="ssh-keys" hostname="clnode268.clemson.cloudlab.us" port="22" username="palmieri"/>
-      <login authentication="ssh-keys" hostname="clnode268.clemson.cloudlab.us" port="22" username="ltseng"/>
-      <login authentication="ssh-keys" hostname="clnode268.clemson.cloudlab.us" port="22" username="adb321"/>
-      <login authentication="ssh-keys" hostname="clnode268.clemson.cloudlab.us" port="22" username="ogrimes"/>
-      <login authentication="ssh-keys" hostname="clnode268.clemson.cloudlab.us" port="22" username="rdy221"/>
-      <login authentication="ssh-keys" hostname="clnode268.clemson.cloudlab.us" port="22" username="tsengle"/>
-      <login authentication="ssh-keys" hostname="clnode268.clemson.cloudlab.us" port="22" username="mfs409"/>
-      <login authentication="ssh-keys" hostname="clnode268.clemson.cloudlab.us" port="22" username="tuglu"/>
-      <login authentication="ssh-keys" hostname="clnode268.clemson.cloudlab.us" port="22" username="billyb"/>
-      <login authentication="ssh-keys" hostname="clnode268.clemson.cloudlab.us" port="22" username="kap325"/>
-      <login authentication="ssh-keys" hostname="clnode268.clemson.cloudlab.us" port="22" username="mlatva"/>
-      <login authentication="ssh-keys" hostname="clnode268.clemson.cloudlab.us" port="22" username="csiems"/>
-      <login authentication="ssh-keys" hostname="clnode268.clemson.cloudlab.us" port="22" username="darius"/>
-      <login authentication="ssh-keys" hostname="clnode268.clemson.cloudlab.us" port="22" username="alclev"/>
-      <login authentication="ssh-keys" hostname="clnode268.clemson.cloudlab.us" port="22" username="rishad"/>
-      <login authentication="ssh-keys" hostname="clnode268.clemson.cloudlab.us" port="22" username="Parthaw"/>
-      <login authentication="ssh-keys" hostname="clnode268.clemson.cloudlab.us" port="22" username="mpk225"/>
-      <login authentication="ssh-keys" hostname="clnode268.clemson.cloudlab.us" port="22" username="sheml"/>
-      <login authentication="ssh-keys" hostname="clnode268.clemson.cloudlab.us" port="22" username="ajbina"/>
-      <login authentication="ssh-keys" hostname="clnode268.clemson.cloudlab.us" port="22" username="Maxman"/>
-      <login authentication="ssh-keys" hostname="clnode268.clemson.cloudlab.us" port="22" username="WScott10"/>
-      <login authentication="ssh-keys" hostname="clnode268.clemson.cloudlab.us" port="22" username="vbalasu1"/>
-      <login authentication="ssh-keys" hostname="clnode268.clemson.cloudlab.us" port="22" username="stevie98"/>
-      <login authentication="ssh-keys" hostname="clnode268.clemson.cloudlab.us" port="22" username="haochen"/>
-      <login authentication="ssh-keys" hostname="clnode268.clemson.cloudlab.us" port="22" username="skb227"/>
-      <login authentication="ssh-keys" hostname="clnode268.clemson.cloudlab.us" port="22" username="Alexis"/>
-      <login authentication="ssh-keys" hostname="clnode268.clemson.cloudlab.us" port="22" username="tmt227"/>
-      <login authentication="ssh-keys" hostname="clnode268.clemson.cloudlab.us" port="22" username="jtw527"/>
-      <emulab:console server="boss.clemson.cloudlab.us"/>
+      <login authentication="ssh-keys" hostname="apt181.apt.emulab.net" port="22" username="balajia"/>
+      <login authentication="ssh-keys" hostname="apt181.apt.emulab.net" port="22" username="palmieri"/>
+      <login authentication="ssh-keys" hostname="apt181.apt.emulab.net" port="22" username="ltseng"/>
+      <login authentication="ssh-keys" hostname="apt181.apt.emulab.net" port="22" username="adb321"/>
+      <login authentication="ssh-keys" hostname="apt181.apt.emulab.net" port="22" username="ogrimes"/>
+      <login authentication="ssh-keys" hostname="apt181.apt.emulab.net" port="22" username="rdy221"/>
+      <login authentication="ssh-keys" hostname="apt181.apt.emulab.net" port="22" username="tsengle"/>
+      <login authentication="ssh-keys" hostname="apt181.apt.emulab.net" port="22" username="mfs409"/>
+      <login authentication="ssh-keys" hostname="apt181.apt.emulab.net" port="22" username="tuglu"/>
+      <login authentication="ssh-keys" hostname="apt181.apt.emulab.net" port="22" username="billyb"/>
+      <login authentication="ssh-keys" hostname="apt181.apt.emulab.net" port="22" username="kap325"/>
+      <login authentication="ssh-keys" hostname="apt181.apt.emulab.net" port="22" username="mlatva"/>
+      <login authentication="ssh-keys" hostname="apt181.apt.emulab.net" port="22" username="csiems"/>
+      <login authentication="ssh-keys" hostname="apt181.apt.emulab.net" port="22" username="darius"/>
+      <login authentication="ssh-keys" hostname="apt181.apt.emulab.net" port="22" username="alclev"/>
+      <login authentication="ssh-keys" hostname="apt181.apt.emulab.net" port="22" username="rishad"/>
+      <login authentication="ssh-keys" hostname="apt181.apt.emulab.net" port="22" username="Parthaw"/>
+      <login authentication="ssh-keys" hostname="apt181.apt.emulab.net" port="22" username="mpk225"/>
+      <login authentication="ssh-keys" hostname="apt181.apt.emulab.net" port="22" username="sheml"/>
+      <login authentication="ssh-keys" hostname="apt181.apt.emulab.net" port="22" username="ajbina"/>
+      <login authentication="ssh-keys" hostname="apt181.apt.emulab.net" port="22" username="Maxman"/>
+      <login authentication="ssh-keys" hostname="apt181.apt.emulab.net" port="22" username="WScott10"/>
+      <login authentication="ssh-keys" hostname="apt181.apt.emulab.net" port="22" username="vbalasu1"/>
+      <login authentication="ssh-keys" hostname="apt181.apt.emulab.net" port="22" username="stevie98"/>
+      <login authentication="ssh-keys" hostname="apt181.apt.emulab.net" port="22" username="skb227"/>
+      <login authentication="ssh-keys" hostname="apt181.apt.emulab.net" port="22" username="Alexis"/>
+      <login authentication="ssh-keys" hostname="apt181.apt.emulab.net" port="22" username="haochen"/>
+      <login authentication="ssh-keys" hostname="apt181.apt.emulab.net" port="22" username="tmt227"/>
+      <login authentication="ssh-keys" hostname="apt181.apt.emulab.net" port="22" username="jtw527"/>
+      <emulab:console server="boss.apt.emulab.net"/>
       <emulab:recovery available="true"/>
       <emulab:powercycle available="true"/>
       <emulab:imageable available="true"/>
     </services>
   </node>
-  <node xmlns:emulab="http://www.protogeni.net/resources/rspec/ext/emulab/1" client_id="node2" exclusive="true" component_manager_id="urn:publicid:IDN+clemson.cloudlab.us+authority+cm" component_id="urn:publicid:IDN+clemson.cloudlab.us+node+clnode277" sliver_id="urn:publicid:IDN+clemson.cloudlab.us+sliver+812990">
+  <node xmlns:emulab="http://www.protogeni.net/resources/rspec/ext/emulab/1" client_id="node2" exclusive="true" component_manager_id="urn:publicid:IDN+apt.emulab.net+authority+cm" component_id="urn:publicid:IDN+apt.emulab.net+node+apt187" sliver_id="urn:publicid:IDN+apt.emulab.net+sliver+495143">
     <sliver_type name="raw-pc">
       <disk_image name="urn:publicid:IDN+emulab.net+image+emulab-ops//UBUNTU24-64-STD"/>
     </sliver_type>
-    <hardware_type name="r650"/>
-    <interface client_id="node2:eth1" component_id="urn:publicid:IDN+clemson.cloudlab.us+interface+clnode277:eth4" sliver_id="urn:publicid:IDN+clemson.cloudlab.us+sliver+813000" mac_address="043f72fecf68">
+    <hardware_type name="r320"/>
+    <interface client_id="node2:eth1" component_id="urn:publicid:IDN+apt.emulab.net+interface+apt187:eth2" sliver_id="urn:publicid:IDN+apt.emulab.net+sliver+495152" mac_address="f45214155022">
       <ip address="10.10.1.3" type="ipv4" netmask="255.255.255.0"/>
     </interface>
-    <emulab:vnode name="clnode277" hardware_type="r650"/>
-    <host name="node2.dmtree-r650.hyflowtm-PG0.clemson.cloudlab.us" ipv4="130.127.134.62"/>
+    <emulab:vnode name="apt187" hardware_type="r320"/>
+    <host name="node2.adb321-312132.hyflowtm-PG0.apt.emulab.net" ipv4="128.110.96.187"/>
     <services>
-      <login authentication="ssh-keys" hostname="clnode277.clemson.cloudlab.us" port="22" username="balajia"/>
-      <login authentication="ssh-keys" hostname="clnode277.clemson.cloudlab.us" port="22" username="palmieri"/>
-      <login authentication="ssh-keys" hostname="clnode277.clemson.cloudlab.us" port="22" username="ltseng"/>
-      <login authentication="ssh-keys" hostname="clnode277.clemson.cloudlab.us" port="22" username="adb321"/>
-      <login authentication="ssh-keys" hostname="clnode277.clemson.cloudlab.us" port="22" username="ogrimes"/>
-      <login authentication="ssh-keys" hostname="clnode277.clemson.cloudlab.us" port="22" username="rdy221"/>
-      <login authentication="ssh-keys" hostname="clnode277.clemson.cloudlab.us" port="22" username="tsengle"/>
-      <login authentication="ssh-keys" hostname="clnode277.clemson.cloudlab.us" port="22" username="mfs409"/>
-      <login authentication="ssh-keys" hostname="clnode277.clemson.cloudlab.us" port="22" username="tuglu"/>
-      <login authentication="ssh-keys" hostname="clnode277.clemson.cloudlab.us" port="22" username="billyb"/>
-      <login authentication="ssh-keys" hostname="clnode277.clemson.cloudlab.us" port="22" username="kap325"/>
-      <login authentication="ssh-keys" hostname="clnode277.clemson.cloudlab.us" port="22" username="mlatva"/>
-      <login authentication="ssh-keys" hostname="clnode277.clemson.cloudlab.us" port="22" username="csiems"/>
-      <login authentication="ssh-keys" hostname="clnode277.clemson.cloudlab.us" port="22" username="darius"/>
-      <login authentication="ssh-keys" hostname="clnode277.clemson.cloudlab.us" port="22" username="alclev"/>
-      <login authentication="ssh-keys" hostname="clnode277.clemson.cloudlab.us" port="22" username="rishad"/>
-      <login authentication="ssh-keys" hostname="clnode277.clemson.cloudlab.us" port="22" username="Parthaw"/>
-      <login authentication="ssh-keys" hostname="clnode277.clemson.cloudlab.us" port="22" username="mpk225"/>
-      <login authentication="ssh-keys" hostname="clnode277.clemson.cloudlab.us" port="22" username="sheml"/>
-      <login authentication="ssh-keys" hostname="clnode277.clemson.cloudlab.us" port="22" username="ajbina"/>
-      <login authentication="ssh-keys" hostname="clnode277.clemson.cloudlab.us" port="22" username="Maxman"/>
-      <login authentication="ssh-keys" hostname="clnode277.clemson.cloudlab.us" port="22" username="WScott10"/>
-      <login authentication="ssh-keys" hostname="clnode277.clemson.cloudlab.us" port="22" username="vbalasu1"/>
-      <login authentication="ssh-keys" hostname="clnode277.clemson.cloudlab.us" port="22" username="stevie98"/>
-      <login authentication="ssh-keys" hostname="clnode277.clemson.cloudlab.us" port="22" username="haochen"/>
-      <login authentication="ssh-keys" hostname="clnode277.clemson.cloudlab.us" port="22" username="skb227"/>
-      <login authentication="ssh-keys" hostname="clnode277.clemson.cloudlab.us" port="22" username="Alexis"/>
-      <login authentication="ssh-keys" hostname="clnode277.clemson.cloudlab.us" port="22" username="tmt227"/>
-      <login authentication="ssh-keys" hostname="clnode277.clemson.cloudlab.us" port="22" username="jtw527"/>
-      <emulab:console server="boss.clemson.cloudlab.us"/>
+      <login authentication="ssh-keys" hostname="apt187.apt.emulab.net" port="22" username="balajia"/>
+      <login authentication="ssh-keys" hostname="apt187.apt.emulab.net" port="22" username="palmieri"/>
+      <login authentication="ssh-keys" hostname="apt187.apt.emulab.net" port="22" username="ltseng"/>
+      <login authentication="ssh-keys" hostname="apt187.apt.emulab.net" port="22" username="adb321"/>
+      <login authentication="ssh-keys" hostname="apt187.apt.emulab.net" port="22" username="ogrimes"/>
+      <login authentication="ssh-keys" hostname="apt187.apt.emulab.net" port="22" username="rdy221"/>
+      <login authentication="ssh-keys" hostname="apt187.apt.emulab.net" port="22" username="tsengle"/>
+      <login authentication="ssh-keys" hostname="apt187.apt.emulab.net" port="22" username="mfs409"/>
+      <login authentication="ssh-keys" hostname="apt187.apt.emulab.net" port="22" username="tuglu"/>
+      <login authentication="ssh-keys" hostname="apt187.apt.emulab.net" port="22" username="billyb"/>
+      <login authentication="ssh-keys" hostname="apt187.apt.emulab.net" port="22" username="kap325"/>
+      <login authentication="ssh-keys" hostname="apt187.apt.emulab.net" port="22" username="mlatva"/>
+      <login authentication="ssh-keys" hostname="apt187.apt.emulab.net" port="22" username="csiems"/>
+      <login authentication="ssh-keys" hostname="apt187.apt.emulab.net" port="22" username="darius"/>
+      <login authentication="ssh-keys" hostname="apt187.apt.emulab.net" port="22" username="alclev"/>
+      <login authentication="ssh-keys" hostname="apt187.apt.emulab.net" port="22" username="rishad"/>
+      <login authentication="ssh-keys" hostname="apt187.apt.emulab.net" port="22" username="Parthaw"/>
+      <login authentication="ssh-keys" hostname="apt187.apt.emulab.net" port="22" username="mpk225"/>
+      <login authentication="ssh-keys" hostname="apt187.apt.emulab.net" port="22" username="sheml"/>
+      <login authentication="ssh-keys" hostname="apt187.apt.emulab.net" port="22" username="ajbina"/>
+      <login authentication="ssh-keys" hostname="apt187.apt.emulab.net" port="22" username="Maxman"/>
+      <login authentication="ssh-keys" hostname="apt187.apt.emulab.net" port="22" username="WScott10"/>
+      <login authentication="ssh-keys" hostname="apt187.apt.emulab.net" port="22" username="vbalasu1"/>
+      <login authentication="ssh-keys" hostname="apt187.apt.emulab.net" port="22" username="stevie98"/>
+      <login authentication="ssh-keys" hostname="apt187.apt.emulab.net" port="22" username="skb227"/>
+      <login authentication="ssh-keys" hostname="apt187.apt.emulab.net" port="22" username="Alexis"/>
+      <login authentication="ssh-keys" hostname="apt187.apt.emulab.net" port="22" username="haochen"/>
+      <login authentication="ssh-keys" hostname="apt187.apt.emulab.net" port="22" username="tmt227"/>
+      <login authentication="ssh-keys" hostname="apt187.apt.emulab.net" port="22" username="jtw527"/>
+      <emulab:console server="boss.apt.emulab.net"/>
       <emulab:recovery available="true"/>
       <emulab:powercycle available="true"/>
       <emulab:imageable available="true"/>
     </services>
   </node>
-  <node xmlns:emulab="http://www.protogeni.net/resources/rspec/ext/emulab/1" client_id="node3" exclusive="true" component_manager_id="urn:publicid:IDN+clemson.cloudlab.us+authority+cm" component_id="urn:publicid:IDN+clemson.cloudlab.us+node+clnode271" sliver_id="urn:publicid:IDN+clemson.cloudlab.us+sliver+812992">
+  <node xmlns:emulab="http://www.protogeni.net/resources/rspec/ext/emulab/1" client_id="node3" exclusive="true" component_manager_id="urn:publicid:IDN+apt.emulab.net+authority+cm" component_id="urn:publicid:IDN+apt.emulab.net+node+apt180" sliver_id="urn:publicid:IDN+apt.emulab.net+sliver+495141">
     <sliver_type name="raw-pc">
       <disk_image name="urn:publicid:IDN+emulab.net+image+emulab-ops//UBUNTU24-64-STD"/>
     </sliver_type>
-    <hardware_type name="r650"/>
-    <interface client_id="node3:eth1" component_id="urn:publicid:IDN+clemson.cloudlab.us+interface+clnode271:eth4" sliver_id="urn:publicid:IDN+clemson.cloudlab.us+sliver+813001" mac_address="043f72fed908">
+    <hardware_type name="r320"/>
+    <interface client_id="node3:eth1" component_id="urn:publicid:IDN+apt.emulab.net+interface+apt180:eth2" sliver_id="urn:publicid:IDN+apt.emulab.net+sliver+495153" mac_address="f45214155082">
       <ip address="10.10.1.4" type="ipv4" netmask="255.255.255.0"/>
     </interface>
-    <emulab:vnode name="clnode271" hardware_type="r650"/>
-    <host name="node3.dmtree-r650.hyflowtm-PG0.clemson.cloudlab.us" ipv4="130.127.134.56"/>
+    <emulab:vnode name="apt180" hardware_type="r320"/>
+    <host name="node3.adb321-312132.hyflowtm-PG0.apt.emulab.net" ipv4="128.110.96.180"/>
     <services>
-      <login authentication="ssh-keys" hostname="clnode271.clemson.cloudlab.us" port="22" username="balajia"/>
-      <login authentication="ssh-keys" hostname="clnode271.clemson.cloudlab.us" port="22" username="palmieri"/>
-      <login authentication="ssh-keys" hostname="clnode271.clemson.cloudlab.us" port="22" username="ltseng"/>
-      <login authentication="ssh-keys" hostname="clnode271.clemson.cloudlab.us" port="22" username="adb321"/>
-      <login authentication="ssh-keys" hostname="clnode271.clemson.cloudlab.us" port="22" username="ogrimes"/>
-      <login authentication="ssh-keys" hostname="clnode271.clemson.cloudlab.us" port="22" username="rdy221"/>
-      <login authentication="ssh-keys" hostname="clnode271.clemson.cloudlab.us" port="22" username="tsengle"/>
-      <login authentication="ssh-keys" hostname="clnode271.clemson.cloudlab.us" port="22" username="mfs409"/>
-      <login authentication="ssh-keys" hostname="clnode271.clemson.cloudlab.us" port="22" username="tuglu"/>
-      <login authentication="ssh-keys" hostname="clnode271.clemson.cloudlab.us" port="22" username="billyb"/>
-      <login authentication="ssh-keys" hostname="clnode271.clemson.cloudlab.us" port="22" username="kap325"/>
-      <login authentication="ssh-keys" hostname="clnode271.clemson.cloudlab.us" port="22" username="mlatva"/>
-      <login authentication="ssh-keys" hostname="clnode271.clemson.cloudlab.us" port="22" username="csiems"/>
-      <login authentication="ssh-keys" hostname="clnode271.clemson.cloudlab.us" port="22" username="darius"/>
-      <login authentication="ssh-keys" hostname="clnode271.clemson.cloudlab.us" port="22" username="alclev"/>
-      <login authentication="ssh-keys" hostname="clnode271.clemson.cloudlab.us" port="22" username="rishad"/>
-      <login authentication="ssh-keys" hostname="clnode271.clemson.cloudlab.us" port="22" username="Parthaw"/>
-      <login authentication="ssh-keys" hostname="clnode271.clemson.cloudlab.us" port="22" username="mpk225"/>
-      <login authentication="ssh-keys" hostname="clnode271.clemson.cloudlab.us" port="22" username="sheml"/>
-      <login authentication="ssh-keys" hostname="clnode271.clemson.cloudlab.us" port="22" username="ajbina"/>
-      <login authentication="ssh-keys" hostname="clnode271.clemson.cloudlab.us" port="22" username="Maxman"/>
-      <login authentication="ssh-keys" hostname="clnode271.clemson.cloudlab.us" port="22" username="WScott10"/>
-      <login authentication="ssh-keys" hostname="clnode271.clemson.cloudlab.us" port="22" username="vbalasu1"/>
-      <login authentication="ssh-keys" hostname="clnode271.clemson.cloudlab.us" port="22" username="stevie98"/>
-      <login authentication="ssh-keys" hostname="clnode271.clemson.cloudlab.us" port="22" username="haochen"/>
-      <login authentication="ssh-keys" hostname="clnode271.clemson.cloudlab.us" port="22" username="skb227"/>
-      <login authentication="ssh-keys" hostname="clnode271.clemson.cloudlab.us" port="22" username="Alexis"/>
-      <login authentication="ssh-keys" hostname="clnode271.clemson.cloudlab.us" port="22" username="tmt227"/>
-      <login authentication="ssh-keys" hostname="clnode271.clemson.cloudlab.us" port="22" username="jtw527"/>
-      <emulab:console server="boss.clemson.cloudlab.us"/>
+      <login authentication="ssh-keys" hostname="apt180.apt.emulab.net" port="22" username="balajia"/>
+      <login authentication="ssh-keys" hostname="apt180.apt.emulab.net" port="22" username="palmieri"/>
+      <login authentication="ssh-keys" hostname="apt180.apt.emulab.net" port="22" username="ltseng"/>
+      <login authentication="ssh-keys" hostname="apt180.apt.emulab.net" port="22" username="adb321"/>
+      <login authentication="ssh-keys" hostname="apt180.apt.emulab.net" port="22" username="ogrimes"/>
+      <login authentication="ssh-keys" hostname="apt180.apt.emulab.net" port="22" username="rdy221"/>
+      <login authentication="ssh-keys" hostname="apt180.apt.emulab.net" port="22" username="tsengle"/>
+      <login authentication="ssh-keys" hostname="apt180.apt.emulab.net" port="22" username="mfs409"/>
+      <login authentication="ssh-keys" hostname="apt180.apt.emulab.net" port="22" username="tuglu"/>
+      <login authentication="ssh-keys" hostname="apt180.apt.emulab.net" port="22" username="billyb"/>
+      <login authentication="ssh-keys" hostname="apt180.apt.emulab.net" port="22" username="kap325"/>
+      <login authentication="ssh-keys" hostname="apt180.apt.emulab.net" port="22" username="mlatva"/>
+      <login authentication="ssh-keys" hostname="apt180.apt.emulab.net" port="22" username="csiems"/>
+      <login authentication="ssh-keys" hostname="apt180.apt.emulab.net" port="22" username="darius"/>
+      <login authentication="ssh-keys" hostname="apt180.apt.emulab.net" port="22" username="alclev"/>
+      <login authentication="ssh-keys" hostname="apt180.apt.emulab.net" port="22" username="rishad"/>
+      <login authentication="ssh-keys" hostname="apt180.apt.emulab.net" port="22" username="Parthaw"/>
+      <login authentication="ssh-keys" hostname="apt180.apt.emulab.net" port="22" username="mpk225"/>
+      <login authentication="ssh-keys" hostname="apt180.apt.emulab.net" port="22" username="sheml"/>
+      <login authentication="ssh-keys" hostname="apt180.apt.emulab.net" port="22" username="ajbina"/>
+      <login authentication="ssh-keys" hostname="apt180.apt.emulab.net" port="22" username="Maxman"/>
+      <login authentication="ssh-keys" hostname="apt180.apt.emulab.net" port="22" username="WScott10"/>
+      <login authentication="ssh-keys" hostname="apt180.apt.emulab.net" port="22" username="vbalasu1"/>
+      <login authentication="ssh-keys" hostname="apt180.apt.emulab.net" port="22" username="stevie98"/>
+      <login authentication="ssh-keys" hostname="apt180.apt.emulab.net" port="22" username="skb227"/>
+      <login authentication="ssh-keys" hostname="apt180.apt.emulab.net" port="22" username="Alexis"/>
+      <login authentication="ssh-keys" hostname="apt180.apt.emulab.net" port="22" username="haochen"/>
+      <login authentication="ssh-keys" hostname="apt180.apt.emulab.net" port="22" username="tmt227"/>
+      <login authentication="ssh-keys" hostname="apt180.apt.emulab.net" port="22" username="jtw527"/>
+      <emulab:console server="boss.apt.emulab.net"/>
       <emulab:recovery available="true"/>
       <emulab:powercycle available="true"/>
       <emulab:imageable available="true"/>
     </services>
   </node>
-  <node xmlns:emulab="http://www.protogeni.net/resources/rspec/ext/emulab/1" client_id="node4" exclusive="true" component_manager_id="urn:publicid:IDN+clemson.cloudlab.us+authority+cm" component_id="urn:publicid:IDN+clemson.cloudlab.us+node+clnode266" sliver_id="urn:publicid:IDN+clemson.cloudlab.us+sliver+812994">
+  <node xmlns:emulab="http://www.protogeni.net/resources/rspec/ext/emulab/1" client_id="node4" exclusive="true" component_manager_id="urn:publicid:IDN+apt.emulab.net+authority+cm" component_id="urn:publicid:IDN+apt.emulab.net+node+apt182" sliver_id="urn:publicid:IDN+apt.emulab.net+sliver+495140">
     <sliver_type name="raw-pc">
       <disk_image name="urn:publicid:IDN+emulab.net+image+emulab-ops//UBUNTU24-64-STD"/>
     </sliver_type>
-    <hardware_type name="r650"/>
-    <interface client_id="node4:eth1" component_id="urn:publicid:IDN+clemson.cloudlab.us+interface+clnode266:eth4" sliver_id="urn:publicid:IDN+clemson.cloudlab.us+sliver+813002" mac_address="043f72fed8e0">
+    <hardware_type name="r320"/>
+    <interface client_id="node4:eth1" component_id="urn:publicid:IDN+apt.emulab.net+interface+apt182:eth2" sliver_id="urn:publicid:IDN+apt.emulab.net+sliver+495154" mac_address="f45214154fc2">
       <ip address="10.10.1.5" type="ipv4" netmask="255.255.255.0"/>
     </interface>
-    <emulab:vnode name="clnode266" hardware_type="r650"/>
-    <host name="node4.dmtree-r650.hyflowtm-PG0.clemson.cloudlab.us" ipv4="130.127.134.51"/>
+    <emulab:vnode name="apt182" hardware_type="r320"/>
+    <host name="node4.adb321-312132.hyflowtm-PG0.apt.emulab.net" ipv4="128.110.96.182"/>
     <services>
-      <login authentication="ssh-keys" hostname="clnode266.clemson.cloudlab.us" port="22" username="balajia"/>
-      <login authentication="ssh-keys" hostname="clnode266.clemson.cloudlab.us" port="22" username="palmieri"/>
-      <login authentication="ssh-keys" hostname="clnode266.clemson.cloudlab.us" port="22" username="ltseng"/>
-      <login authentication="ssh-keys" hostname="clnode266.clemson.cloudlab.us" port="22" username="adb321"/>
-      <login authentication="ssh-keys" hostname="clnode266.clemson.cloudlab.us" port="22" username="ogrimes"/>
-      <login authentication="ssh-keys" hostname="clnode266.clemson.cloudlab.us" port="22" username="rdy221"/>
-      <login authentication="ssh-keys" hostname="clnode266.clemson.cloudlab.us" port="22" username="tsengle"/>
-      <login authentication="ssh-keys" hostname="clnode266.clemson.cloudlab.us" port="22" username="mfs409"/>
-      <login authentication="ssh-keys" hostname="clnode266.clemson.cloudlab.us" port="22" username="tuglu"/>
-      <login authentication="ssh-keys" hostname="clnode266.clemson.cloudlab.us" port="22" username="billyb"/>
-      <login authentication="ssh-keys" hostname="clnode266.clemson.cloudlab.us" port="22" username="kap325"/>
-      <login authentication="ssh-keys" hostname="clnode266.clemson.cloudlab.us" port="22" username="mlatva"/>
-      <login authentication="ssh-keys" hostname="clnode266.clemson.cloudlab.us" port="22" username="csiems"/>
-      <login authentication="ssh-keys" hostname="clnode266.clemson.cloudlab.us" port="22" username="darius"/>
-      <login authentication="ssh-keys" hostname="clnode266.clemson.cloudlab.us" port="22" username="alclev"/>
-      <login authentication="ssh-keys" hostname="clnode266.clemson.cloudlab.us" port="22" username="rishad"/>
-      <login authentication="ssh-keys" hostname="clnode266.clemson.cloudlab.us" port="22" username="Parthaw"/>
-      <login authentication="ssh-keys" hostname="clnode266.clemson.cloudlab.us" port="22" username="mpk225"/>
-      <login authentication="ssh-keys" hostname="clnode266.clemson.cloudlab.us" port="22" username="sheml"/>
-      <login authentication="ssh-keys" hostname="clnode266.clemson.cloudlab.us" port="22" username="ajbina"/>
-      <login authentication="ssh-keys" hostname="clnode266.clemson.cloudlab.us" port="22" username="Maxman"/>
-      <login authentication="ssh-keys" hostname="clnode266.clemson.cloudlab.us" port="22" username="WScott10"/>
-      <login authentication="ssh-keys" hostname="clnode266.clemson.cloudlab.us" port="22" username="vbalasu1"/>
-      <login authentication="ssh-keys" hostname="clnode266.clemson.cloudlab.us" port="22" username="stevie98"/>
-      <login authentication="ssh-keys" hostname="clnode266.clemson.cloudlab.us" port="22" username="haochen"/>
-      <login authentication="ssh-keys" hostname="clnode266.clemson.cloudlab.us" port="22" username="skb227"/>
-      <login authentication="ssh-keys" hostname="clnode266.clemson.cloudlab.us" port="22" username="Alexis"/>
-      <login authentication="ssh-keys" hostname="clnode266.clemson.cloudlab.us" port="22" username="tmt227"/>
-      <login authentication="ssh-keys" hostname="clnode266.clemson.cloudlab.us" port="22" username="jtw527"/>
-      <emulab:console server="boss.clemson.cloudlab.us"/>
+      <login authentication="ssh-keys" hostname="apt182.apt.emulab.net" port="22" username="balajia"/>
+      <login authentication="ssh-keys" hostname="apt182.apt.emulab.net" port="22" username="palmieri"/>
+      <login authentication="ssh-keys" hostname="apt182.apt.emulab.net" port="22" username="ltseng"/>
+      <login authentication="ssh-keys" hostname="apt182.apt.emulab.net" port="22" username="adb321"/>
+      <login authentication="ssh-keys" hostname="apt182.apt.emulab.net" port="22" username="ogrimes"/>
+      <login authentication="ssh-keys" hostname="apt182.apt.emulab.net" port="22" username="rdy221"/>
+      <login authentication="ssh-keys" hostname="apt182.apt.emulab.net" port="22" username="tsengle"/>
+      <login authentication="ssh-keys" hostname="apt182.apt.emulab.net" port="22" username="mfs409"/>
+      <login authentication="ssh-keys" hostname="apt182.apt.emulab.net" port="22" username="tuglu"/>
+      <login authentication="ssh-keys" hostname="apt182.apt.emulab.net" port="22" username="billyb"/>
+      <login authentication="ssh-keys" hostname="apt182.apt.emulab.net" port="22" username="kap325"/>
+      <login authentication="ssh-keys" hostname="apt182.apt.emulab.net" port="22" username="mlatva"/>
+      <login authentication="ssh-keys" hostname="apt182.apt.emulab.net" port="22" username="csiems"/>
+      <login authentication="ssh-keys" hostname="apt182.apt.emulab.net" port="22" username="darius"/>
+      <login authentication="ssh-keys" hostname="apt182.apt.emulab.net" port="22" username="alclev"/>
+      <login authentication="ssh-keys" hostname="apt182.apt.emulab.net" port="22" username="rishad"/>
+      <login authentication="ssh-keys" hostname="apt182.apt.emulab.net" port="22" username="Parthaw"/>
+      <login authentication="ssh-keys" hostname="apt182.apt.emulab.net" port="22" username="mpk225"/>
+      <login authentication="ssh-keys" hostname="apt182.apt.emulab.net" port="22" username="sheml"/>
+      <login authentication="ssh-keys" hostname="apt182.apt.emulab.net" port="22" username="ajbina"/>
+      <login authentication="ssh-keys" hostname="apt182.apt.emulab.net" port="22" username="Maxman"/>
+      <login authentication="ssh-keys" hostname="apt182.apt.emulab.net" port="22" username="WScott10"/>
+      <login authentication="ssh-keys" hostname="apt182.apt.emulab.net" port="22" username="vbalasu1"/>
+      <login authentication="ssh-keys" hostname="apt182.apt.emulab.net" port="22" username="stevie98"/>
+      <login authentication="ssh-keys" hostname="apt182.apt.emulab.net" port="22" username="skb227"/>
+      <login authentication="ssh-keys" hostname="apt182.apt.emulab.net" port="22" username="Alexis"/>
+      <login authentication="ssh-keys" hostname="apt182.apt.emulab.net" port="22" username="haochen"/>
+      <login authentication="ssh-keys" hostname="apt182.apt.emulab.net" port="22" username="tmt227"/>
+      <login authentication="ssh-keys" hostname="apt182.apt.emulab.net" port="22" username="jtw527"/>
+      <emulab:console server="boss.apt.emulab.net"/>
       <emulab:recovery available="true"/>
       <emulab:powercycle available="true"/>
       <emulab:imageable available="true"/>
     </services>
   </node>
-  <node xmlns:emulab="http://www.protogeni.net/resources/rspec/ext/emulab/1" client_id="node5" exclusive="true" component_manager_id="urn:publicid:IDN+clemson.cloudlab.us+authority+cm" component_id="urn:publicid:IDN+clemson.cloudlab.us+node+clnode274" sliver_id="urn:publicid:IDN+clemson.cloudlab.us+sliver+812995">
+  <node xmlns:emulab="http://www.protogeni.net/resources/rspec/ext/emulab/1" client_id="node5" exclusive="true" component_manager_id="urn:publicid:IDN+apt.emulab.net+authority+cm" component_id="urn:publicid:IDN+apt.emulab.net+node+apt173" sliver_id="urn:publicid:IDN+apt.emulab.net+sliver+495142">
     <sliver_type name="raw-pc">
       <disk_image name="urn:publicid:IDN+emulab.net+image+emulab-ops//UBUNTU24-64-STD"/>
     </sliver_type>
-    <hardware_type name="r650"/>
-    <interface client_id="node5:eth1" component_id="urn:publicid:IDN+clemson.cloudlab.us+interface+clnode274:eth4" sliver_id="urn:publicid:IDN+clemson.cloudlab.us+sliver+813003" mac_address="043f72fedc58">
+    <hardware_type name="r320"/>
+    <interface client_id="node5:eth1" component_id="urn:publicid:IDN+apt.emulab.net+interface+apt173:eth2" sliver_id="urn:publicid:IDN+apt.emulab.net+sliver+495155" mac_address="f452141571c2">
       <ip address="10.10.1.6" type="ipv4" netmask="255.255.255.0"/>
     </interface>
-    <emulab:vnode name="clnode274" hardware_type="r650"/>
-    <host name="node5.dmtree-r650.hyflowtm-PG0.clemson.cloudlab.us" ipv4="130.127.134.59"/>
+    <emulab:vnode name="apt173" hardware_type="r320"/>
+    <host name="node5.adb321-312132.hyflowtm-PG0.apt.emulab.net" ipv4="128.110.96.173"/>
     <services>
-      <login authentication="ssh-keys" hostname="clnode274.clemson.cloudlab.us" port="22" username="balajia"/>
-      <login authentication="ssh-keys" hostname="clnode274.clemson.cloudlab.us" port="22" username="palmieri"/>
-      <login authentication="ssh-keys" hostname="clnode274.clemson.cloudlab.us" port="22" username="ltseng"/>
-      <login authentication="ssh-keys" hostname="clnode274.clemson.cloudlab.us" port="22" username="adb321"/>
-      <login authentication="ssh-keys" hostname="clnode274.clemson.cloudlab.us" port="22" username="ogrimes"/>
-      <login authentication="ssh-keys" hostname="clnode274.clemson.cloudlab.us" port="22" username="rdy221"/>
-      <login authentication="ssh-keys" hostname="clnode274.clemson.cloudlab.us" port="22" username="tsengle"/>
-      <login authentication="ssh-keys" hostname="clnode274.clemson.cloudlab.us" port="22" username="mfs409"/>
-      <login authentication="ssh-keys" hostname="clnode274.clemson.cloudlab.us" port="22" username="tuglu"/>
-      <login authentication="ssh-keys" hostname="clnode274.clemson.cloudlab.us" port="22" username="billyb"/>
-      <login authentication="ssh-keys" hostname="clnode274.clemson.cloudlab.us" port="22" username="kap325"/>
-      <login authentication="ssh-keys" hostname="clnode274.clemson.cloudlab.us" port="22" username="mlatva"/>
-      <login authentication="ssh-keys" hostname="clnode274.clemson.cloudlab.us" port="22" username="csiems"/>
-      <login authentication="ssh-keys" hostname="clnode274.clemson.cloudlab.us" port="22" username="darius"/>
-      <login authentication="ssh-keys" hostname="clnode274.clemson.cloudlab.us" port="22" username="alclev"/>
-      <login authentication="ssh-keys" hostname="clnode274.clemson.cloudlab.us" port="22" username="rishad"/>
-      <login authentication="ssh-keys" hostname="clnode274.clemson.cloudlab.us" port="22" username="Parthaw"/>
-      <login authentication="ssh-keys" hostname="clnode274.clemson.cloudlab.us" port="22" username="mpk225"/>
-      <login authentication="ssh-keys" hostname="clnode274.clemson.cloudlab.us" port="22" username="sheml"/>
-      <login authentication="ssh-keys" hostname="clnode274.clemson.cloudlab.us" port="22" username="ajbina"/>
-      <login authentication="ssh-keys" hostname="clnode274.clemson.cloudlab.us" port="22" username="Maxman"/>
-      <login authentication="ssh-keys" hostname="clnode274.clemson.cloudlab.us" port="22" username="WScott10"/>
-      <login authentication="ssh-keys" hostname="clnode274.clemson.cloudlab.us" port="22" username="vbalasu1"/>
-      <login authentication="ssh-keys" hostname="clnode274.clemson.cloudlab.us" port="22" username="stevie98"/>
-      <login authentication="ssh-keys" hostname="clnode274.clemson.cloudlab.us" port="22" username="haochen"/>
-      <login authentication="ssh-keys" hostname="clnode274.clemson.cloudlab.us" port="22" username="skb227"/>
-      <login authentication="ssh-keys" hostname="clnode274.clemson.cloudlab.us" port="22" username="Alexis"/>
-      <login authentication="ssh-keys" hostname="clnode274.clemson.cloudlab.us" port="22" username="tmt227"/>
-      <login authentication="ssh-keys" hostname="clnode274.clemson.cloudlab.us" port="22" username="jtw527"/>
-      <emulab:console server="boss.clemson.cloudlab.us"/>
+      <login authentication="ssh-keys" hostname="apt173.apt.emulab.net" port="22" username="balajia"/>
+      <login authentication="ssh-keys" hostname="apt173.apt.emulab.net" port="22" username="palmieri"/>
+      <login authentication="ssh-keys" hostname="apt173.apt.emulab.net" port="22" username="ltseng"/>
+      <login authentication="ssh-keys" hostname="apt173.apt.emulab.net" port="22" username="adb321"/>
+      <login authentication="ssh-keys" hostname="apt173.apt.emulab.net" port="22" username="ogrimes"/>
+      <login authentication="ssh-keys" hostname="apt173.apt.emulab.net" port="22" username="rdy221"/>
+      <login authentication="ssh-keys" hostname="apt173.apt.emulab.net" port="22" username="tsengle"/>
+      <login authentication="ssh-keys" hostname="apt173.apt.emulab.net" port="22" username="mfs409"/>
+      <login authentication="ssh-keys" hostname="apt173.apt.emulab.net" port="22" username="tuglu"/>
+      <login authentication="ssh-keys" hostname="apt173.apt.emulab.net" port="22" username="billyb"/>
+      <login authentication="ssh-keys" hostname="apt173.apt.emulab.net" port="22" username="kap325"/>
+      <login authentication="ssh-keys" hostname="apt173.apt.emulab.net" port="22" username="mlatva"/>
+      <login authentication="ssh-keys" hostname="apt173.apt.emulab.net" port="22" username="csiems"/>
+      <login authentication="ssh-keys" hostname="apt173.apt.emulab.net" port="22" username="darius"/>
+      <login authentication="ssh-keys" hostname="apt173.apt.emulab.net" port="22" username="alclev"/>
+      <login authentication="ssh-keys" hostname="apt173.apt.emulab.net" port="22" username="rishad"/>
+      <login authentication="ssh-keys" hostname="apt173.apt.emulab.net" port="22" username="Parthaw"/>
+      <login authentication="ssh-keys" hostname="apt173.apt.emulab.net" port="22" username="mpk225"/>
+      <login authentication="ssh-keys" hostname="apt173.apt.emulab.net" port="22" username="sheml"/>
+      <login authentication="ssh-keys" hostname="apt173.apt.emulab.net" port="22" username="ajbina"/>
+      <login authentication="ssh-keys" hostname="apt173.apt.emulab.net" port="22" username="Maxman"/>
+      <login authentication="ssh-keys" hostname="apt173.apt.emulab.net" port="22" username="WScott10"/>
+      <login authentication="ssh-keys" hostname="apt173.apt.emulab.net" port="22" username="vbalasu1"/>
+      <login authentication="ssh-keys" hostname="apt173.apt.emulab.net" port="22" username="stevie98"/>
+      <login authentication="ssh-keys" hostname="apt173.apt.emulab.net" port="22" username="skb227"/>
+      <login authentication="ssh-keys" hostname="apt173.apt.emulab.net" port="22" username="Alexis"/>
+      <login authentication="ssh-keys" hostname="apt173.apt.emulab.net" port="22" username="haochen"/>
+      <login authentication="ssh-keys" hostname="apt173.apt.emulab.net" port="22" username="tmt227"/>
+      <login authentication="ssh-keys" hostname="apt173.apt.emulab.net" port="22" username="jtw527"/>
+      <emulab:console server="boss.apt.emulab.net"/>
       <emulab:recovery available="true"/>
       <emulab:powercycle available="true"/>
       <emulab:imageable available="true"/>
     </services>
   </node>
-  <node xmlns:emulab="http://www.protogeni.net/resources/rspec/ext/emulab/1" client_id="node6" exclusive="true" component_manager_id="urn:publicid:IDN+clemson.cloudlab.us+authority+cm" component_id="urn:publicid:IDN+clemson.cloudlab.us+node+clnode282" sliver_id="urn:publicid:IDN+clemson.cloudlab.us+sliver+812993">
+  <node xmlns:emulab="http://www.protogeni.net/resources/rspec/ext/emulab/1" client_id="node6" exclusive="true" component_manager_id="urn:publicid:IDN+apt.emulab.net+authority+cm" component_id="urn:publicid:IDN+apt.emulab.net+node+apt177" sliver_id="urn:publicid:IDN+apt.emulab.net+sliver+495147">
     <sliver_type name="raw-pc">
       <disk_image name="urn:publicid:IDN+emulab.net+image+emulab-ops//UBUNTU24-64-STD"/>
     </sliver_type>
-    <hardware_type name="r650"/>
-    <interface client_id="node6:eth1" component_id="urn:publicid:IDN+clemson.cloudlab.us+interface+clnode282:eth4" sliver_id="urn:publicid:IDN+clemson.cloudlab.us+sliver+813004" mac_address="043f72fedc18">
+    <hardware_type name="r320"/>
+    <interface client_id="node6:eth1" component_id="urn:publicid:IDN+apt.emulab.net+interface+apt177:eth2" sliver_id="urn:publicid:IDN+apt.emulab.net+sliver+495156" mac_address="f45214156d92">
       <ip address="10.10.1.7" type="ipv4" netmask="255.255.255.0"/>
     </interface>
-    <emulab:vnode name="clnode282" hardware_type="r650"/>
-    <host name="node6.dmtree-r650.hyflowtm-PG0.clemson.cloudlab.us" ipv4="130.127.134.67"/>
+    <emulab:vnode name="apt177" hardware_type="r320"/>
+    <host name="node6.adb321-312132.hyflowtm-PG0.apt.emulab.net" ipv4="128.110.96.177"/>
     <services>
-      <login authentication="ssh-keys" hostname="clnode282.clemson.cloudlab.us" port="22" username="balajia"/>
-      <login authentication="ssh-keys" hostname="clnode282.clemson.cloudlab.us" port="22" username="palmieri"/>
-      <login authentication="ssh-keys" hostname="clnode282.clemson.cloudlab.us" port="22" username="ltseng"/>
-      <login authentication="ssh-keys" hostname="clnode282.clemson.cloudlab.us" port="22" username="adb321"/>
-      <login authentication="ssh-keys" hostname="clnode282.clemson.cloudlab.us" port="22" username="ogrimes"/>
-      <login authentication="ssh-keys" hostname="clnode282.clemson.cloudlab.us" port="22" username="rdy221"/>
-      <login authentication="ssh-keys" hostname="clnode282.clemson.cloudlab.us" port="22" username="tsengle"/>
-      <login authentication="ssh-keys" hostname="clnode282.clemson.cloudlab.us" port="22" username="mfs409"/>
-      <login authentication="ssh-keys" hostname="clnode282.clemson.cloudlab.us" port="22" username="tuglu"/>
-      <login authentication="ssh-keys" hostname="clnode282.clemson.cloudlab.us" port="22" username="billyb"/>
-      <login authentication="ssh-keys" hostname="clnode282.clemson.cloudlab.us" port="22" username="kap325"/>
-      <login authentication="ssh-keys" hostname="clnode282.clemson.cloudlab.us" port="22" username="mlatva"/>
-      <login authentication="ssh-keys" hostname="clnode282.clemson.cloudlab.us" port="22" username="csiems"/>
-      <login authentication="ssh-keys" hostname="clnode282.clemson.cloudlab.us" port="22" username="darius"/>
-      <login authentication="ssh-keys" hostname="clnode282.clemson.cloudlab.us" port="22" username="alclev"/>
-      <login authentication="ssh-keys" hostname="clnode282.clemson.cloudlab.us" port="22" username="rishad"/>
-      <login authentication="ssh-keys" hostname="clnode282.clemson.cloudlab.us" port="22" username="Parthaw"/>
-      <login authentication="ssh-keys" hostname="clnode282.clemson.cloudlab.us" port="22" username="mpk225"/>
-      <login authentication="ssh-keys" hostname="clnode282.clemson.cloudlab.us" port="22" username="sheml"/>
-      <login authentication="ssh-keys" hostname="clnode282.clemson.cloudlab.us" port="22" username="ajbina"/>
-      <login authentication="ssh-keys" hostname="clnode282.clemson.cloudlab.us" port="22" username="Maxman"/>
-      <login authentication="ssh-keys" hostname="clnode282.clemson.cloudlab.us" port="22" username="WScott10"/>
-      <login authentication="ssh-keys" hostname="clnode282.clemson.cloudlab.us" port="22" username="vbalasu1"/>
-      <login authentication="ssh-keys" hostname="clnode282.clemson.cloudlab.us" port="22" username="stevie98"/>
-      <login authentication="ssh-keys" hostname="clnode282.clemson.cloudlab.us" port="22" username="haochen"/>
-      <login authentication="ssh-keys" hostname="clnode282.clemson.cloudlab.us" port="22" username="skb227"/>
-      <login authentication="ssh-keys" hostname="clnode282.clemson.cloudlab.us" port="22" username="Alexis"/>
-      <login authentication="ssh-keys" hostname="clnode282.clemson.cloudlab.us" port="22" username="tmt227"/>
-      <login authentication="ssh-keys" hostname="clnode282.clemson.cloudlab.us" port="22" username="jtw527"/>
-      <emulab:console server="boss.clemson.cloudlab.us"/>
+      <login authentication="ssh-keys" hostname="apt177.apt.emulab.net" port="22" username="balajia"/>
+      <login authentication="ssh-keys" hostname="apt177.apt.emulab.net" port="22" username="palmieri"/>
+      <login authentication="ssh-keys" hostname="apt177.apt.emulab.net" port="22" username="ltseng"/>
+      <login authentication="ssh-keys" hostname="apt177.apt.emulab.net" port="22" username="adb321"/>
+      <login authentication="ssh-keys" hostname="apt177.apt.emulab.net" port="22" username="ogrimes"/>
+      <login authentication="ssh-keys" hostname="apt177.apt.emulab.net" port="22" username="rdy221"/>
+      <login authentication="ssh-keys" hostname="apt177.apt.emulab.net" port="22" username="tsengle"/>
+      <login authentication="ssh-keys" hostname="apt177.apt.emulab.net" port="22" username="mfs409"/>
+      <login authentication="ssh-keys" hostname="apt177.apt.emulab.net" port="22" username="tuglu"/>
+      <login authentication="ssh-keys" hostname="apt177.apt.emulab.net" port="22" username="billyb"/>
+      <login authentication="ssh-keys" hostname="apt177.apt.emulab.net" port="22" username="kap325"/>
+      <login authentication="ssh-keys" hostname="apt177.apt.emulab.net" port="22" username="mlatva"/>
+      <login authentication="ssh-keys" hostname="apt177.apt.emulab.net" port="22" username="csiems"/>
+      <login authentication="ssh-keys" hostname="apt177.apt.emulab.net" port="22" username="darius"/>
+      <login authentication="ssh-keys" hostname="apt177.apt.emulab.net" port="22" username="alclev"/>
+      <login authentication="ssh-keys" hostname="apt177.apt.emulab.net" port="22" username="rishad"/>
+      <login authentication="ssh-keys" hostname="apt177.apt.emulab.net" port="22" username="Parthaw"/>
+      <login authentication="ssh-keys" hostname="apt177.apt.emulab.net" port="22" username="mpk225"/>
+      <login authentication="ssh-keys" hostname="apt177.apt.emulab.net" port="22" username="sheml"/>
+      <login authentication="ssh-keys" hostname="apt177.apt.emulab.net" port="22" username="ajbina"/>
+      <login authentication="ssh-keys" hostname="apt177.apt.emulab.net" port="22" username="Maxman"/>
+      <login authentication="ssh-keys" hostname="apt177.apt.emulab.net" port="22" username="WScott10"/>
+      <login authentication="ssh-keys" hostname="apt177.apt.emulab.net" port="22" username="vbalasu1"/>
+      <login authentication="ssh-keys" hostname="apt177.apt.emulab.net" port="22" username="stevie98"/>
+      <login authentication="ssh-keys" hostname="apt177.apt.emulab.net" port="22" username="skb227"/>
+      <login authentication="ssh-keys" hostname="apt177.apt.emulab.net" port="22" username="Alexis"/>
+      <login authentication="ssh-keys" hostname="apt177.apt.emulab.net" port="22" username="haochen"/>
+      <login authentication="ssh-keys" hostname="apt177.apt.emulab.net" port="22" username="tmt227"/>
+      <login authentication="ssh-keys" hostname="apt177.apt.emulab.net" port="22" username="jtw527"/>
+      <emulab:console server="boss.apt.emulab.net"/>
       <emulab:recovery available="true"/>
       <emulab:powercycle available="true"/>
       <emulab:imageable available="true"/>
     </services>
   </node>
-  <node xmlns:emulab="http://www.protogeni.net/resources/rspec/ext/emulab/1" client_id="node7" exclusive="true" component_manager_id="urn:publicid:IDN+clemson.cloudlab.us+authority+cm" component_id="urn:publicid:IDN+clemson.cloudlab.us+node+clnode260" sliver_id="urn:publicid:IDN+clemson.cloudlab.us+sliver+812989">
+  <node xmlns:emulab="http://www.protogeni.net/resources/rspec/ext/emulab/1" client_id="node7" exclusive="true" component_manager_id="urn:publicid:IDN+apt.emulab.net+authority+cm" component_id="urn:publicid:IDN+apt.emulab.net+node+apt179" sliver_id="urn:publicid:IDN+apt.emulab.net+sliver+495145">
     <sliver_type name="raw-pc">
       <disk_image name="urn:publicid:IDN+emulab.net+image+emulab-ops//UBUNTU24-64-STD"/>
     </sliver_type>
-    <hardware_type name="r650"/>
-    <interface client_id="node7:eth1" component_id="urn:publicid:IDN+clemson.cloudlab.us+interface+clnode260:eth4" sliver_id="urn:publicid:IDN+clemson.cloudlab.us+sliver+813005" mac_address="043f72f29bd2">
+    <hardware_type name="r320"/>
+    <interface client_id="node7:eth1" component_id="urn:publicid:IDN+apt.emulab.net+interface+apt179:eth2" sliver_id="urn:publicid:IDN+apt.emulab.net+sliver+495157" mac_address="f452141547a2">
       <ip address="10.10.1.8" type="ipv4" netmask="255.255.255.0"/>
     </interface>
-    <emulab:vnode name="clnode260" hardware_type="r650"/>
-    <host name="node7.dmtree-r650.hyflowtm-PG0.clemson.cloudlab.us" ipv4="130.127.134.45"/>
+    <emulab:vnode name="apt179" hardware_type="r320"/>
+    <host name="node7.adb321-312132.hyflowtm-PG0.apt.emulab.net" ipv4="128.110.96.179"/>
     <services>
-      <login authentication="ssh-keys" hostname="clnode260.clemson.cloudlab.us" port="22" username="balajia"/>
-      <login authentication="ssh-keys" hostname="clnode260.clemson.cloudlab.us" port="22" username="palmieri"/>
-      <login authentication="ssh-keys" hostname="clnode260.clemson.cloudlab.us" port="22" username="ltseng"/>
-      <login authentication="ssh-keys" hostname="clnode260.clemson.cloudlab.us" port="22" username="adb321"/>
-      <login authentication="ssh-keys" hostname="clnode260.clemson.cloudlab.us" port="22" username="ogrimes"/>
-      <login authentication="ssh-keys" hostname="clnode260.clemson.cloudlab.us" port="22" username="rdy221"/>
-      <login authentication="ssh-keys" hostname="clnode260.clemson.cloudlab.us" port="22" username="tsengle"/>
-      <login authentication="ssh-keys" hostname="clnode260.clemson.cloudlab.us" port="22" username="mfs409"/>
-      <login authentication="ssh-keys" hostname="clnode260.clemson.cloudlab.us" port="22" username="tuglu"/>
-      <login authentication="ssh-keys" hostname="clnode260.clemson.cloudlab.us" port="22" username="billyb"/>
-      <login authentication="ssh-keys" hostname="clnode260.clemson.cloudlab.us" port="22" username="kap325"/>
-      <login authentication="ssh-keys" hostname="clnode260.clemson.cloudlab.us" port="22" username="mlatva"/>
-      <login authentication="ssh-keys" hostname="clnode260.clemson.cloudlab.us" port="22" username="csiems"/>
-      <login authentication="ssh-keys" hostname="clnode260.clemson.cloudlab.us" port="22" username="darius"/>
-      <login authentication="ssh-keys" hostname="clnode260.clemson.cloudlab.us" port="22" username="alclev"/>
-      <login authentication="ssh-keys" hostname="clnode260.clemson.cloudlab.us" port="22" username="rishad"/>
-      <login authentication="ssh-keys" hostname="clnode260.clemson.cloudlab.us" port="22" username="Parthaw"/>
-      <login authentication="ssh-keys" hostname="clnode260.clemson.cloudlab.us" port="22" username="mpk225"/>
-      <login authentication="ssh-keys" hostname="clnode260.clemson.cloudlab.us" port="22" username="sheml"/>
-      <login authentication="ssh-keys" hostname="clnode260.clemson.cloudlab.us" port="22" username="ajbina"/>
-      <login authentication="ssh-keys" hostname="clnode260.clemson.cloudlab.us" port="22" username="Maxman"/>
-      <login authentication="ssh-keys" hostname="clnode260.clemson.cloudlab.us" port="22" username="WScott10"/>
-      <login authentication="ssh-keys" hostname="clnode260.clemson.cloudlab.us" port="22" username="vbalasu1"/>
-      <login authentication="ssh-keys" hostname="clnode260.clemson.cloudlab.us" port="22" username="stevie98"/>
-      <login authentication="ssh-keys" hostname="clnode260.clemson.cloudlab.us" port="22" username="haochen"/>
-      <login authentication="ssh-keys" hostname="clnode260.clemson.cloudlab.us" port="22" username="skb227"/>
-      <login authentication="ssh-keys" hostname="clnode260.clemson.cloudlab.us" port="22" username="Alexis"/>
-      <login authentication="ssh-keys" hostname="clnode260.clemson.cloudlab.us" port="22" username="tmt227"/>
-      <login authentication="ssh-keys" hostname="clnode260.clemson.cloudlab.us" port="22" username="jtw527"/>
-      <emulab:console server="boss.clemson.cloudlab.us"/>
+      <login authentication="ssh-keys" hostname="apt179.apt.emulab.net" port="22" username="balajia"/>
+      <login authentication="ssh-keys" hostname="apt179.apt.emulab.net" port="22" username="palmieri"/>
+      <login authentication="ssh-keys" hostname="apt179.apt.emulab.net" port="22" username="ltseng"/>
+      <login authentication="ssh-keys" hostname="apt179.apt.emulab.net" port="22" username="adb321"/>
+      <login authentication="ssh-keys" hostname="apt179.apt.emulab.net" port="22" username="ogrimes"/>
+      <login authentication="ssh-keys" hostname="apt179.apt.emulab.net" port="22" username="rdy221"/>
+      <login authentication="ssh-keys" hostname="apt179.apt.emulab.net" port="22" username="tsengle"/>
+      <login authentication="ssh-keys" hostname="apt179.apt.emulab.net" port="22" username="mfs409"/>
+      <login authentication="ssh-keys" hostname="apt179.apt.emulab.net" port="22" username="tuglu"/>
+      <login authentication="ssh-keys" hostname="apt179.apt.emulab.net" port="22" username="billyb"/>
+      <login authentication="ssh-keys" hostname="apt179.apt.emulab.net" port="22" username="kap325"/>
+      <login authentication="ssh-keys" hostname="apt179.apt.emulab.net" port="22" username="mlatva"/>
+      <login authentication="ssh-keys" hostname="apt179.apt.emulab.net" port="22" username="csiems"/>
+      <login authentication="ssh-keys" hostname="apt179.apt.emulab.net" port="22" username="darius"/>
+      <login authentication="ssh-keys" hostname="apt179.apt.emulab.net" port="22" username="alclev"/>
+      <login authentication="ssh-keys" hostname="apt179.apt.emulab.net" port="22" username="rishad"/>
+      <login authentication="ssh-keys" hostname="apt179.apt.emulab.net" port="22" username="Parthaw"/>
+      <login authentication="ssh-keys" hostname="apt179.apt.emulab.net" port="22" username="mpk225"/>
+      <login authentication="ssh-keys" hostname="apt179.apt.emulab.net" port="22" username="sheml"/>
+      <login authentication="ssh-keys" hostname="apt179.apt.emulab.net" port="22" username="ajbina"/>
+      <login authentication="ssh-keys" hostname="apt179.apt.emulab.net" port="22" username="Maxman"/>
+      <login authentication="ssh-keys" hostname="apt179.apt.emulab.net" port="22" username="WScott10"/>
+      <login authentication="ssh-keys" hostname="apt179.apt.emulab.net" port="22" username="vbalasu1"/>
+      <login authentication="ssh-keys" hostname="apt179.apt.emulab.net" port="22" username="stevie98"/>
+      <login authentication="ssh-keys" hostname="apt179.apt.emulab.net" port="22" username="skb227"/>
+      <login authentication="ssh-keys" hostname="apt179.apt.emulab.net" port="22" username="Alexis"/>
+      <login authentication="ssh-keys" hostname="apt179.apt.emulab.net" port="22" username="haochen"/>
+      <login authentication="ssh-keys" hostname="apt179.apt.emulab.net" port="22" username="tmt227"/>
+      <login authentication="ssh-keys" hostname="apt179.apt.emulab.net" port="22" username="jtw527"/>
+      <emulab:console server="boss.apt.emulab.net"/>
       <emulab:recovery available="true"/>
       <emulab:powercycle available="true"/>
       <emulab:imageable available="true"/>
     </services>
   </node>
-  <link client_id="link-1" sliver_id="urn:publicid:IDN+clemson.cloudlab.us+sliver+812997" vlantag="260">
-    <interface_ref client_id="node0:eth1" component_id="urn:publicid:IDN+clemson.cloudlab.us+interface+clnode267:eth4" sliver_id="urn:publicid:IDN+clemson.cloudlab.us+sliver+812998"/>
-    <interface_ref client_id="node1:eth1" component_id="urn:publicid:IDN+clemson.cloudlab.us+interface+clnode268:eth4" sliver_id="urn:publicid:IDN+clemson.cloudlab.us+sliver+812999"/>
-    <interface_ref client_id="node2:eth1" component_id="urn:publicid:IDN+clemson.cloudlab.us+interface+clnode277:eth4" sliver_id="urn:publicid:IDN+clemson.cloudlab.us+sliver+813000"/>
-    <interface_ref client_id="node3:eth1" component_id="urn:publicid:IDN+clemson.cloudlab.us+interface+clnode271:eth4" sliver_id="urn:publicid:IDN+clemson.cloudlab.us+sliver+813001"/>
-    <interface_ref client_id="node4:eth1" component_id="urn:publicid:IDN+clemson.cloudlab.us+interface+clnode266:eth4" sliver_id="urn:publicid:IDN+clemson.cloudlab.us+sliver+813002"/>
-    <interface_ref client_id="node5:eth1" component_id="urn:publicid:IDN+clemson.cloudlab.us+interface+clnode274:eth4" sliver_id="urn:publicid:IDN+clemson.cloudlab.us+sliver+813003"/>
-    <interface_ref client_id="node6:eth1" component_id="urn:publicid:IDN+clemson.cloudlab.us+interface+clnode282:eth4" sliver_id="urn:publicid:IDN+clemson.cloudlab.us+sliver+813004"/>
-    <interface_ref client_id="node7:eth1" component_id="urn:publicid:IDN+clemson.cloudlab.us+interface+clnode260:eth4" sliver_id="urn:publicid:IDN+clemson.cloudlab.us+sliver+813005"/>
+  <link client_id="link-1" sliver_id="urn:publicid:IDN+apt.emulab.net+sliver+495149" vlantag="259">
+    <interface_ref client_id="node0:eth1" component_id="urn:publicid:IDN+apt.emulab.net+interface+apt176:eth2" sliver_id="urn:publicid:IDN+apt.emulab.net+sliver+495150"/>
+    <interface_ref client_id="node1:eth1" component_id="urn:publicid:IDN+apt.emulab.net+interface+apt181:eth2" sliver_id="urn:publicid:IDN+apt.emulab.net+sliver+495151"/>
+    <interface_ref client_id="node2:eth1" component_id="urn:publicid:IDN+apt.emulab.net+interface+apt187:eth2" sliver_id="urn:publicid:IDN+apt.emulab.net+sliver+495152"/>
+    <interface_ref client_id="node3:eth1" component_id="urn:publicid:IDN+apt.emulab.net+interface+apt180:eth2" sliver_id="urn:publicid:IDN+apt.emulab.net+sliver+495153"/>
+    <interface_ref client_id="node4:eth1" component_id="urn:publicid:IDN+apt.emulab.net+interface+apt182:eth2" sliver_id="urn:publicid:IDN+apt.emulab.net+sliver+495154"/>
+    <interface_ref client_id="node5:eth1" component_id="urn:publicid:IDN+apt.emulab.net+interface+apt173:eth2" sliver_id="urn:publicid:IDN+apt.emulab.net+sliver+495155"/>
+    <interface_ref client_id="node6:eth1" component_id="urn:publicid:IDN+apt.emulab.net+interface+apt177:eth2" sliver_id="urn:publicid:IDN+apt.emulab.net+sliver+495156"/>
+    <interface_ref client_id="node7:eth1" component_id="urn:publicid:IDN+apt.emulab.net+interface+apt179:eth2" sliver_id="urn:publicid:IDN+apt.emulab.net+sliver+495157"/>
     <link_type name="lan"/>
-    <component_manager name="urn:publicid:IDN+clemson.cloudlab.us+authority+cm"/>
-    <property xmlns="http://www.geni.net/resources/rspec/3" source_id="node0:eth1" dest_id="node1:eth1" capacity="100000000"/>
-    <property xmlns="http://www.geni.net/resources/rspec/3" source_id="node0:eth1" dest_id="node2:eth1" capacity="100000000"/>
-    <property xmlns="http://www.geni.net/resources/rspec/3" source_id="node0:eth1" dest_id="node3:eth1" capacity="100000000"/>
-    <property xmlns="http://www.geni.net/resources/rspec/3" source_id="node0:eth1" dest_id="node4:eth1" capacity="100000000"/>
-    <property xmlns="http://www.geni.net/resources/rspec/3" source_id="node0:eth1" dest_id="node5:eth1" capacity="100000000"/>
-    <property xmlns="http://www.geni.net/resources/rspec/3" source_id="node0:eth1" dest_id="node6:eth1" capacity="100000000"/>
-    <property xmlns="http://www.geni.net/resources/rspec/3" source_id="node0:eth1" dest_id="node7:eth1" capacity="100000000"/>
-    <property xmlns="http://www.geni.net/resources/rspec/3" source_id="node1:eth1" dest_id="node0:eth1" capacity="100000000"/>
-    <property xmlns="http://www.geni.net/resources/rspec/3" source_id="node1:eth1" dest_id="node2:eth1" capacity="100000000"/>
-    <property xmlns="http://www.geni.net/resources/rspec/3" source_id="node1:eth1" dest_id="node3:eth1" capacity="100000000"/>
-    <property xmlns="http://www.geni.net/resources/rspec/3" source_id="node1:eth1" dest_id="node4:eth1" capacity="100000000"/>
-    <property xmlns="http://www.geni.net/resources/rspec/3" source_id="node1:eth1" dest_id="node5:eth1" capacity="100000000"/>
-    <property xmlns="http://www.geni.net/resources/rspec/3" source_id="node1:eth1" dest_id="node6:eth1" capacity="100000000"/>
-    <property xmlns="http://www.geni.net/resources/rspec/3" source_id="node1:eth1" dest_id="node7:eth1" capacity="100000000"/>
-    <property xmlns="http://www.geni.net/resources/rspec/3" source_id="node2:eth1" dest_id="node0:eth1" capacity="100000000"/>
-    <property xmlns="http://www.geni.net/resources/rspec/3" source_id="node2:eth1" dest_id="node1:eth1" capacity="100000000"/>
-    <property xmlns="http://www.geni.net/resources/rspec/3" source_id="node2:eth1" dest_id="node3:eth1" capacity="100000000"/>
-    <property xmlns="http://www.geni.net/resources/rspec/3" source_id="node2:eth1" dest_id="node4:eth1" capacity="100000000"/>
-    <property xmlns="http://www.geni.net/resources/rspec/3" source_id="node2:eth1" dest_id="node5:eth1" capacity="100000000"/>
-    <property xmlns="http://www.geni.net/resources/rspec/3" source_id="node2:eth1" dest_id="node6:eth1" capacity="100000000"/>
-    <property xmlns="http://www.geni.net/resources/rspec/3" source_id="node2:eth1" dest_id="node7:eth1" capacity="100000000"/>
-    <property xmlns="http://www.geni.net/resources/rspec/3" source_id="node3:eth1" dest_id="node0:eth1" capacity="100000000"/>
-    <property xmlns="http://www.geni.net/resources/rspec/3" source_id="node3:eth1" dest_id="node1:eth1" capacity="100000000"/>
-    <property xmlns="http://www.geni.net/resources/rspec/3" source_id="node3:eth1" dest_id="node2:eth1" capacity="100000000"/>
-    <property xmlns="http://www.geni.net/resources/rspec/3" source_id="node3:eth1" dest_id="node4:eth1" capacity="100000000"/>
-    <property xmlns="http://www.geni.net/resources/rspec/3" source_id="node3:eth1" dest_id="node5:eth1" capacity="100000000"/>
-    <property xmlns="http://www.geni.net/resources/rspec/3" source_id="node3:eth1" dest_id="node6:eth1" capacity="100000000"/>
-    <property xmlns="http://www.geni.net/resources/rspec/3" source_id="node3:eth1" dest_id="node7:eth1" capacity="100000000"/>
-    <property xmlns="http://www.geni.net/resources/rspec/3" source_id="node4:eth1" dest_id="node0:eth1" capacity="100000000"/>
-    <property xmlns="http://www.geni.net/resources/rspec/3" source_id="node4:eth1" dest_id="node1:eth1" capacity="100000000"/>
-    <property xmlns="http://www.geni.net/resources/rspec/3" source_id="node4:eth1" dest_id="node2:eth1" capacity="100000000"/>
-    <property xmlns="http://www.geni.net/resources/rspec/3" source_id="node4:eth1" dest_id="node3:eth1" capacity="100000000"/>
-    <property xmlns="http://www.geni.net/resources/rspec/3" source_id="node4:eth1" dest_id="node5:eth1" capacity="100000000"/>
-    <property xmlns="http://www.geni.net/resources/rspec/3" source_id="node4:eth1" dest_id="node6:eth1" capacity="100000000"/>
-    <property xmlns="http://www.geni.net/resources/rspec/3" source_id="node4:eth1" dest_id="node7:eth1" capacity="100000000"/>
-    <property xmlns="http://www.geni.net/resources/rspec/3" source_id="node5:eth1" dest_id="node0:eth1" capacity="100000000"/>
-    <property xmlns="http://www.geni.net/resources/rspec/3" source_id="node5:eth1" dest_id="node1:eth1" capacity="100000000"/>
-    <property xmlns="http://www.geni.net/resources/rspec/3" source_id="node5:eth1" dest_id="node2:eth1" capacity="100000000"/>
-    <property xmlns="http://www.geni.net/resources/rspec/3" source_id="node5:eth1" dest_id="node3:eth1" capacity="100000000"/>
-    <property xmlns="http://www.geni.net/resources/rspec/3" source_id="node5:eth1" dest_id="node4:eth1" capacity="100000000"/>
-    <property xmlns="http://www.geni.net/resources/rspec/3" source_id="node5:eth1" dest_id="node6:eth1" capacity="100000000"/>
-    <property xmlns="http://www.geni.net/resources/rspec/3" source_id="node5:eth1" dest_id="node7:eth1" capacity="100000000"/>
-    <property xmlns="http://www.geni.net/resources/rspec/3" source_id="node6:eth1" dest_id="node0:eth1" capacity="100000000"/>
-    <property xmlns="http://www.geni.net/resources/rspec/3" source_id="node6:eth1" dest_id="node1:eth1" capacity="100000000"/>
-    <property xmlns="http://www.geni.net/resources/rspec/3" source_id="node6:eth1" dest_id="node2:eth1" capacity="100000000"/>
-    <property xmlns="http://www.geni.net/resources/rspec/3" source_id="node6:eth1" dest_id="node3:eth1" capacity="100000000"/>
-    <property xmlns="http://www.geni.net/resources/rspec/3" source_id="node6:eth1" dest_id="node4:eth1" capacity="100000000"/>
-    <property xmlns="http://www.geni.net/resources/rspec/3" source_id="node6:eth1" dest_id="node5:eth1" capacity="100000000"/>
-    <property xmlns="http://www.geni.net/resources/rspec/3" source_id="node6:eth1" dest_id="node7:eth1" capacity="100000000"/>
-    <property xmlns="http://www.geni.net/resources/rspec/3" source_id="node7:eth1" dest_id="node0:eth1" capacity="100000000"/>
-    <property xmlns="http://www.geni.net/resources/rspec/3" source_id="node7:eth1" dest_id="node1:eth1" capacity="100000000"/>
-    <property xmlns="http://www.geni.net/resources/rspec/3" source_id="node7:eth1" dest_id="node2:eth1" capacity="100000000"/>
-    <property xmlns="http://www.geni.net/resources/rspec/3" source_id="node7:eth1" dest_id="node3:eth1" capacity="100000000"/>
-    <property xmlns="http://www.geni.net/resources/rspec/3" source_id="node7:eth1" dest_id="node4:eth1" capacity="100000000"/>
-    <property xmlns="http://www.geni.net/resources/rspec/3" source_id="node7:eth1" dest_id="node5:eth1" capacity="100000000"/>
-    <property xmlns="http://www.geni.net/resources/rspec/3" source_id="node7:eth1" dest_id="node6:eth1" capacity="100000000"/>
+    <component_manager name="urn:publicid:IDN+apt.emulab.net+authority+cm"/>
   </link>
   <rspec_tour xmlns="http://www.protogeni.net/resources/rspec/ext/apt-tour/1">
     <description type="markdown">Variable number of nodes in a lan. You have the option of picking from one
@@ -446,14 +390,14 @@ Use `sudo` to run root commands.
 </instructions>
   </rspec_tour>
   <data_set xmlns="http://www.protogeni.net/resources/rspec/ext/profile-parameters/1">
-    <data_item name="emulab.net.parameter.linkSpeed">100000000</data_item>
+    <data_item name="emulab.net.parameter.linkSpeed">0</data_item>
     <data_item name="emulab.net.parameter.tempFileSystemSize">0</data_item>
     <data_item name="emulab.net.parameter.useVMs">False</data_item>
     <data_item name="emulab.net.parameter.tempFileSystemMax">False</data_item>
     <data_item name="emulab.net.parameter.tempFileSystemMount">/mydata</data_item>
     <data_item name="emulab.net.parameter.exclusiveVMs">True</data_item>
     <data_item name="emulab.net.parameter.bestEffort">False</data_item>
-    <data_item name="emulab.net.parameter.phystype">r650</data_item>
+    <data_item name="emulab.net.parameter.phystype">r320</data_item>
     <data_item name="emulab.net.parameter.sameSwitch">False</data_item>
     <data_item name="emulab.net.parameter.osImage">urn:publicid:IDN+emulab.net+image+emulab-ops//UBUNTU24-64-STD</data_item>
     <data_item name="emulab.net.parameter.nodeCount">8</data_item>
@@ -464,28 +408,28 @@ MIID+QYJKoZIhvcNAQcDoIID6jCCA+YCAQAxggHNMIIByQIBADCBsDCBqDELMAkG
 A1UEBhMCVVMxDTALBgNVBAgTBFV0YWgxFzAVBgNVBAcTDlNhbHQgTGFrZSBDaXR5
 MR0wGwYDVQQKExRVdGFoIE5ldHdvcmsgVGVzdGJlZDEPMA0GA1UECxMGQVBUTEFC
 MRcwFQYDVQQDEw53d3cuYXB0bGFiLm5ldDEoMCYGCSqGSIb3DQEJARYZdGVzdGJl
-ZC1vcHNAZmx1eC51dGFoLmVkdQIDJi4EMA0GCSqGSIb3DQEBAQUABIIBACbGtCQT
-turtVATnd+9aWDbBgDu/Y/q3joErG8MkspnVKTEgiyBzwNgeMDf56kiMrQ7srBjD
-FuWj8ZP2ibBZsuWXbkK83gWrQdAcE6TLnpid8Pwe2Qfb6Z/q9Kf/4/ixpjw5vj9Y
-imMcalT51zfQyw2WP76Qi2yTeO7MYBAvcQSNIc+IUHG7l+dE+ZAPj5ld/Nf2LZ6b
-pwG7L0GA+N0QPm7YdesmRx+yJFqHzWEtgUJZprFTfoAjH0e0/ooNddPN4aL0YB8P
-GmGoiTU7IFJros99n/O5zl8SVB7Yq+qHgWe5Zh6AUUD39aNcbBfzq+PUJYj/wd0z
-i5uWLC900R8W2J0wggIOBgkqhkiG9w0BBwEwHQYJYIZIAWUDBAEqBBD+zQD5iClr
-plIBZAFuzB7xgIIB4PHGryJi77VLOfD9MQRkycflauxkmizJV0zjSOCfENf8pKpl
-ZqYGl21aOKvXMkXgYeTPwSgp+FPlevw6TDFfvGjGEbx3oMFdhR6QRuHE9pzI/8UG
-SKSpgGiASHOR5a8K/GViN3fd/oqYzJMmSJGb3lLMKtv8WDfDOnzpULuKubu/QGoq
-nRaFHWbPNf8lZXhwEHXZWzxAEauW3NuLECTGLAh5fdPs6b4qvckh6OOi6ETLPBmh
-4t03jcjgH+4uDXuZO7oyEuR1/4ob/zMKHri6ZVJ414T6b5UMfDMgTwtXJK0U0EIa
-CChQtVl2UNg3+BvQnZYRFbDBwkJWZiTBOpStB3R6/OQJhSbccmHKLp+dbXBe5UAy
-Iz1RbN83Zrs6hVytQz0eDHTD4cz5L5gT8AZiylawkh0lWxF+kQL8N1e9ah6c62Eg
-25K2fyce0kgyj/Sd/zRCgSHRaSxXENv5BBiomMhiMrN5xzaq+d1l70pHrej8/2w9
-SAq92nr/84zd4wG1ILGazqBtYtz93Ktl+78f79XCH/sRHyRZpNRsPwqFjonpIGnE
-rELBpampP+DN8nCxfMs/0U4ZGa+52Qo5TP5HHHNEqzSYMRRMUnPUpKSUBBxHS1eZ
-4zD0ijcijOOs9lcWfg==
+ZC1vcHNAZmx1eC51dGFoLmVkdQIDJkI5MA0GCSqGSIb3DQEBAQUABIIBAIIALLW3
+UCHq2fn87OjSVeLbBgmCsHwlCOkEFiomvd4/Af3oT8u/pZu+r9vKyH/8lsV+P0Bn
+lPnVcxr8+ZO+8eSIxEQCT4CwNOWkuwsYdJbn4ZuMZesrc8Dnz0y6S2i4AI8e6AwK
+2DWY2+Xdz5y93uRNiR0iEM37Hvc5pSCxbkEoArYLq4DaQlWX5PsndnFv5/mgZvSq
+mVlPM47t+xMh78xg4nvviaID2uGDLxekzAI3OzmJ7mjvwzhXP+IM3CDV3ucsjvlF
+1O5GMJ9pCIfzLr2oZ2rLs3y+7YdVbfiE7JE11dEzM1xvg526jxwG7FBIu+VqUX6F
+87pyl8fff+FhtQEwggIOBgkqhkiG9w0BBwEwHQYJYIZIAWUDBAEqBBCNZ34pPt6q
+AldpdnqY0Jh+gIIB4BUkBoIjlJUlD/+NyKSZrFsJo+xT75GDuVQqMU9/r+PCez2S
+g2kIaAgi8QEhdxCbPjlSomywGtAWi7yfZXcPbwkDfKqYQFPt7sy7+2AvOEsGpnHA
+66OP1aSINSTmc/wWpGVCcLN4qxp4X9OQJ8K/jy1jM6UKkkd1aR9mPdpYkRO0wcKi
+9vovu65/BGr6rKuwpofQceuKqgZsIT9EtYDhQ5p+fK91si1sG2OJoYu0pv60Uv/G
+OINQK84JU6rO45BFCePK5ZtDvwex4Ezgai/b8UHF3KsdMsYfAGGqk5hSclSVYHP+
+qwsZeVbop/PPUTzoAKvKzP3WGphFBJ4SFeQFfo14b90CfLvGXyahKmNJ9icywGD2
++kedw5ovIwPKTLUpYF+k9RKl3y7dD+8Wb0l/a7Q8x3Lejjcw12DgizT5SZG3SoiI
+yUDXo2Kla0hk5oR7OzUWNQT3cUN/9sLUu0GogzTm69PTChEQTUMfYa0HPfO0y+Lv
+ByqbJL7c/LP7MTJfLFh5XENXzhxXGRqR9Ctry4lCFgj15272mLmVjoiht40RZMix
+JRQG/smbacc3LF8SWJr1zvqbqecb0dPYZY7mLZNLbkTy1GUM0xglZRJ0h6VDIura
+k4MH+Ycz0nrEfxpupw==
 -----END PKCS7-----
 </emulab:password>
-  <emulab:portal name="cloudlab" url="https://www.cloudlab.us/status.php?uuid=b0f72271-e0cb-49d5-971b-bbac30559b9a" project="HyflowTM" experiment="dmtree-r650" sequence="1785162317"/>
+  <emulab:portal name="cloudlab" url="https://www.cloudlab.us/status.php?uuid=6fd951b2-64f0-4fa2-9f69-c7cb8664b5e6" project="HyflowTM" experiment="adb321-312132" sequence="1785769975"/>
   <rs:site_info xmlns:rs="http://www.protogeni.net/resources/rspec/ext/site-info/1">
-    <rs:location country="US" latitude="34.586496" longitude="-82.821457"/>
+    <rs:location country="US" latitude="40.750714" longitude="-111.893288"/>
   </rs:site_info>
 </rspec>

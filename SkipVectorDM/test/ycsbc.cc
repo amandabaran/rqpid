@@ -316,7 +316,7 @@ int main(const int argc, const char* argv[]) {
 	finish_thread_count.store(0);
 
 	config.machineNR = kNodeCount;
-	config.dsmSize = 16;
+	config.dsmSize      = 2;
 	config.ComputeNumber = kComputeNodeCount;
 	config.MemoryNumber = kMemoryNodeCount;
 

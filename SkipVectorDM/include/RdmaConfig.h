@@ -16,7 +16,7 @@
 #include <time.h>
 #include <vector>
 
-#define MAX_THREAD_NUM 80
+#define MAX_THREAD_NUM 4
 #define APP_MESSAGE_NR 96
 
 #define NR_DIRECTORY 1
@@ -70,7 +70,7 @@ constexpr uint64_t kLocalLockNum = 4 * MB;
 // level of tree
 constexpr uint64_t kMaxLevelOfTree = 27;
 
-constexpr uint64_t rdmaBufferSize     = 32;         // GB  [CONFIG] 4
+constexpr uint64_t rdmaBufferSize     = 2;         // GB  [CONFIG] 4
 constexpr uint16_t kMaxCoro = 8;
 constexpr int64_t  kPerThreadRdmaBuf  = rdmaBufferSize * GB / MAX_THREAD_NUM;
 constexpr int64_t  kPerCoroRdmaBuf    = kPerThreadRdmaBuf / kMaxCoro;

@@ -134,6 +134,12 @@ ibv_mr *createMemoryRegion(uint64_t mm, uint64_t mmSize, RdmaContext *ctx) {
   if (!mr) {
     Debug::notifyError("Memory registration failed");
   }
+  if (!mr) {
+    fprintf(stderr, "ibv_reg_mr FAILED: addr=0x%lx size=%lu errno=%d (%s)\n",
+            mm, mmSize, errno, strerror(errno));
+    fflush(stderr);
+  }
+
 
   return mr;
 }
@@ -147,8 +153,13 @@ ibv_mr *createMemoryRegionOnChip(uint64_t mm, uint64_t mmSize,
   dm_attr.length = mmSize;
   struct ibv_dm *dm = ibv_alloc_dm(ctx->ctx, &dm_attr);
   if (!dm) {
-    Debug::notifyError("Allocate on-chip memory failed");
-    return nullptr;
+    // Debug::notifyError("Allocate on-chip memory failed");
+    // return nullptr;
+     // ConnectX-3 and older: no on-chip device memory. Fall back to regular MR.
+    Debug::notifyInfo("On-chip DM not supported; falling back to regular MR");
+    void* fallback = calloc(1, mmSize);   // zeroed heap
+    if (!fallback) return nullptr;
+    return createMemoryRegion((uint64_t)fallback, mmSize, ctx);
   }
   printf("allocate on-chip memory\n");
   /* Device memory registration as memory region */

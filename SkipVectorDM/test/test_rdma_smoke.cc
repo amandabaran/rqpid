@@ -147,7 +147,7 @@ static void run_compute_server() {
 
 int main(int argc, char* argv[]) {
     DMConfig config;
-    config.dsmSize      = 8;                // GB per MS; SV region is ~2.75 GB
+    config.dsmSize      = 2;                // GB per MS; SV region is ~2.75 GB
     config.machineNR    = kNodeCount;
     config.ComputeNumber = kComputeNodeCount;
     config.MemoryNumber  = kMemoryNodeCount;
