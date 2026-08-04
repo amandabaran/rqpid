@@ -18,9 +18,10 @@ include_directories(${INCLUDE_BASE})
 # source directory
 aux_source_directory(src SOURCE_DIR_SRCS)
 aux_source_directory(src/rdma BASELINE_DIR_SRCS)
+aux_source_directory(src/skipvector SKIPVECTOR_SRCS) 
 
 # add output lib
-add_library(system STATIC ${SOURCE_DIR_SRCS} ${BASELINE_DIR_SRCS})
+add_library(system STATIC ${SOURCE_DIR_SRCS} ${BASELINE_DIR_SRCS} ${SKIPVECTOR_SRCS})
 target_include_directories(system PUBLIC ${PROJECT_SOURCE_DIR}/include)
 
 # add executable file
@@ -29,7 +30,7 @@ foreach (TEST ${TEST_SRC})
     get_filename_component(TEST_NAME ${TEST} NAME_WE)
 
     # add source directory and dir directory
-    add_executable(${TEST_NAME} ${TEST} ${SOURCE_DIR_SRCS} ${BASELINE_DIR_SRCS})
+    add_executable(${TEST_NAME} ${TEST} ${SOURCE_DIR_SRCS} ${BASELINE_DIR_SRCS} ${SKIPVECTOR_SRCS})
     
     target_link_libraries(${TEST_NAME} PUBLIC ${LINKS_FLAGS})
 endforeach()

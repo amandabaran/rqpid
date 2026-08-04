@@ -535,3 +535,28 @@ int DMVerbs::poll_rdma_cqs(ibv_wc* wc) {
 
 	return res;
 }
+
+void DMVerbs::read_tagged(char* buffer, Gaddr gaddr, size_t size, uint64_t wr_id, bool signal) {
+    rdma_cnt[getMyThreadID()][gaddr.nodeID]++;
+    rdma_bw[getMyThreadID()][gaddr.nodeID] += size;
+    rdmaRead(iCon->data[0][gaddr.nodeID], (uint64_t)buffer,
+             remoteInfo[gaddr.nodeID].dsmBase + gaddr.offset, size,
+             iCon->cacheLKey, remoteInfo[gaddr.nodeID].dsmRKey[0], signal, wr_id);
+}
+
+void DMVerbs::write_tagged(const char* buffer, Gaddr gaddr, size_t size, uint64_t wr_id, bool signal) {
+    rdma_cnt[getMyThreadID()][gaddr.nodeID]++;
+    rdma_bw[getMyThreadID()][gaddr.nodeID] += size;
+    rdmaWrite(iCon->data[0][gaddr.nodeID], (uint64_t)buffer,
+              remoteInfo[gaddr.nodeID].dsmBase + gaddr.offset, size,
+              iCon->cacheLKey, remoteInfo[gaddr.nodeID].dsmRKey[0], -1, signal, wr_id);
+}
+
+void DMVerbs::cas_tagged(Gaddr gaddr, uint64_t equal, uint64_t val,
+                         uint64_t* rdma_buffer, uint64_t wr_id, bool signal) {
+    rdma_cnt[getMyThreadID()][gaddr.nodeID]++;
+    rdmaCompareAndSwap(iCon->data[0][gaddr.nodeID], (uint64_t)rdma_buffer,
+                       remoteInfo[gaddr.nodeID].dsmBase + gaddr.offset,
+                       equal, val, iCon->cacheLKey,
+                       remoteInfo[gaddr.nodeID].dsmRKey[0], signal, wr_id);
+}

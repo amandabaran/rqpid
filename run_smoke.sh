@@ -5,7 +5,7 @@ REPO_DIR='$HOME/skipvecdm/SkipVectorDM'
 BUILD_DIR="$REPO_DIR/build"
 BIN=test_rdma_smoke
 
-trap 'echo "Interrupt — killing MSes"; for n in 1 2 3 4; do ssh w$n "pkill -9 $BIN" 2>/dev/null; done; exit 1' SIGINT
+trap 'echo "Interrupt — killing MSes"; for n in 1 2 3 4; do ssh w$n "pkill -9 -f $BIN" 2>/dev/null; done; exit 1' SIGINT
 
 echo "==> Restarting memcached + seeding coordinator keys"
 if ! ssh w1 "bash $REPO_DIR/script/restart_memc.sh" > /tmp/memc_init.log 2>&1; then
@@ -15,7 +15,7 @@ if ! ssh w1 "bash $REPO_DIR/script/restart_memc.sh" > /tmp/memc_init.log 2>&1; t
 fi
 
 echo "==> Killing any lingering processes"
-for n in 1 2 3 4; do ssh w$n "pkill -9 $BIN" 2>/dev/null; done
+for n in 1 2 3 4; do ssh w$n "pkill -9 -f $BIN" 2>/dev/null; done
 sleep 1
 
 echo "==> Launching 3 memory servers"
@@ -30,7 +30,7 @@ ssh w4 "cd $BUILD_DIR && ./$BIN" | tee /tmp/cs.log
 CS_RC=${PIPESTATUS[0]}
 
 echo "==> CS exited (rc=$CS_RC); stopping MSes"
-for n in 1 2 3 4; do ssh w$n "pkill -9 $BIN" 2>/dev/null; done
+for n in 1 2 3 4; do ssh w$n "pkill -9 -f $BIN" 2>/dev/null; done
 
 echo "==> MS logs at wN:/tmp/ms_N.log  (ssh wN 'cat /tmp/ms_N.log')"
 exit $CS_RC

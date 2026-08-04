@@ -146,6 +146,11 @@ public:
 	void faa_dm_boundary_sync(Gaddr gaddr, uint64_t add_val,
 	                          uint64_t* rdma_buffer, uint64_t mask = 63,
 	                          CoroContext* ctx = nullptr);
+	
+	// wr_id-tagged async variants for parallel-to-quorum dispatch
+	void read_tagged(char* buffer, Gaddr gaddr, size_t size, uint64_t wr_id, bool signal = true);
+	void write_tagged(const char* buffer, Gaddr gaddr, size_t size, uint64_t wr_id, bool signal = true);
+	void cas_tagged(Gaddr gaddr, uint64_t equal, uint64_t val, uint64_t* rdma_buffer, uint64_t wr_id, bool signal = true);
 
 	uint64_t poll_rdma_cq(int count = 1);
 	int poll_rdma_cqs(ibv_wc* wc);
